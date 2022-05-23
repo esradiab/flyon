@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled/model/passengersmodel.dart';
 
 import '../../passenger.dart';
-import '../../selectcity.dart';
+import '../../selectairport.dart';
 
 class RoundTrip extends StatefulWidget{
   @override
@@ -51,7 +51,7 @@ class _RoundTrip extends State<RoundTrip>{
                     ),
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SelectCity()));
+                          MaterialPageRoute(builder: (context) => SelectAirport()));
                     },
                     onChanged: (String inputtext) {
                       setState(() {
@@ -75,7 +75,7 @@ class _RoundTrip extends State<RoundTrip>{
                       readOnly: true,
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => SelectCity()));
+                            MaterialPageRoute(builder: (context) => SelectAirport()));
                       },
                       onChanged: (String inputtext) {
                         setState(() {
