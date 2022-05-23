@@ -1,0 +1,486 @@
+[
+ {
+  "city" : "Istanbul",
+  "country": "Turkey",
+  "Description": " is the largest city in Turkey and the country's economic, cultural and historic center. The city straddles the Bosphorus strait, and lies in both Europe and Asia, with a population of over 15 million residents, comprising 19% of the population of Turkey. Istanbul is the most populous city in Europe, and the world's fifteenth-largest city.",
+  "URLpicture": "https://istanbultouristpass.com/app/img/istanbul-cloudy-e1450431846495.jpg",
+  "cityID": "IST"
+ },
+ {
+  "city" : "Tripoli",
+  "country": "Libya",
+  "Description":"Tripoli is the capital and largest city of Libya. Its population reached (940,653) thousand in 2012, the region is in the northwest of Libya. The city is built on a rocky headland overlooking the Mediterranean Sea against the southern tip of Sicily. To the east is the Tajoura region, to the west by Janzour, to the south by the Al-Sawani region, and the Mediterranean to the north. And in the center of the city is Martyrs Square and Al-Saray Al-Hamra. The city of Tripoli is described as the \"Bride of the Mediterranean\", due to the beauty of its orchards and white buildings. Tripoli is also called \"Tripoli of the West\" to distinguish it from \"Tripoli of the Levant\" located in northern Lebanon.",
+  "URLpicture":"https://e3arabi.com/wp-content/uploads/2019/10/tripoli-2229019_1920-780x470.jpg",
+  "cityID": "TIP"
+ },
+
+ {
+  "city" : "Sfax",
+  "country": "tunis",
+  "Description":" is a city in Tunisia, located 270 km (170 mi) southeast of Tunis. The city, founded in AD 849 on the ruins of Roman Taparura, is the capital of the Sfax Governorate (about 955,421 inhabitants in 2014),[citation needed] and a Mediterranean port.",
+  "URLpicture":"https://read.os-cdn.com/wp-content/uploads/2019/08/%D8%A3%D9%8A%D9%86-%D8%AA%D9%82%D8%B9-%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%B5%D9%81%D8%A7%D9%82%D8%B3.jpg",
+  "cityID": "SFA"
+ },
+
+ {
+  "city" : "Antalya",
+  "country": "Turkey",
+  "Description": "Antalya Province.located on Anatolia's southwest coast bordered by the Taurus Mountains, Antalya is the largest Turkish city on the Mediterranean coast outside the Aegean region with over one million people in its metropolitan area..",
+  "URLpicture": "https://abjadih.com/wp-content/uploads/2018/10/ploiuyyt.jpg",
+  "cityID": "AYT"
+ },
+
+ { "city" : "Amman",
+  "country": "Jordan",
+  "Description": "  is the capital and largest city of Jordan and the country's economic, political and cultural center. With a population of 4,007,526, Amman is the largest city in the Levant region and the sixth-largest city in the Arab world.",
+  "URLpicture": "https://goaqaba.com/wp-content/uploads/2017/01/Amman-Jordan.jpg",
+  "cityID": "AMM"
+ },
+
+ {
+  "city" : "cairo",
+  "country": "egypt",
+  "Description": "Cairo is the largest metropolitan area in the Arab world, the second largest in Africa, and the sixth largest in the world. Cairo is associated with ancient Egypt, as the famous Giza pyramid complex and the ancient city of Memphis are located in its geographical area. Located near the Nile Delta, Cairo was founded in 969 AD during the Fatimid dynasty, but the land composing the present-day city was the site of Ancient National Capitals whose remnants remain visible in parts of Old Cairo..",
+  "URLpicture": "https://media-cdn.tripadvisor.com/media/photo-c/2560x500/03/9b/2f/5b/cairo.jpg",
+  "cityID": "CAI"
+ },
+
+ {
+  "city" : "tunis",
+  "country": "tunisia",
+  "Description":"It is a part of the Maghreb region of North Africa, and is bordered by Algeria to the west and southwest, Libya to the southeast, and the Mediterranean Sea to the north and east; covering 163,610 km2 (63,170 sq mi), with a population of 11 million. It contains the eastern end of the Atlas Mountains and the northern reaches of the Sahara desert, with much of its remaining territory arable land. ",
+  "URLpicture": "https://www.elmstba.com/wp-content/uploads/%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D8%B9%D9%86-%D8%AA%D9%88%D9%86%D8%B3.jpg",
+  "cityID": "TUN"
+ },
+
+ {
+  "city" : "Alexandria",
+  "country": "Egypt",
+  "Description": "Alexandria is the third-largest city in Egypt after Cairo and Giza, the seventh-largest city in Africa, and a major economic centre. With a total population of 5,381,000, Alexandria is the largest city on the Mediterranean – also called the 'Bride of the Mediterranean' by locals – the fourth-largest city in the Arab world and the ninth-largest urban area in Africa. The city extends about 40 km (25 mi) at the northern coast of Egypt along the Mediterranean Sea..",
+  "URLpicture": "https://blisstours.net/wp-content/uploads/2016/09/Alexandria-City-Egypt-Egypt-Tours-Portal.jpg",
+  "cityID": "HBE"
+ },
+
+ {
+  "city" : "Benghazi",
+  "country": "Libya",
+  "Description":"is a city in Libya. Located on the Gulf of Sidra in the Mediterranean, Benghazi is a major seaport and the second-most populous city in the country, as well as the largest city in Cyrenaica, with an estimated population of 632,937 in 2019.[1]",
+  "URLpicture":"https://cdn.vox-cdn.com/thumbor/j5IRh95obq0Hry_YYs54p3ySZmg=/0x0:5184x3456/920x613/filters:focal(2334x1591:3162x2419):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/62358431/GettyImages_155222857.0.jpg",
+  "cityID": "BEN"
+ },
+
+ {
+  "city" : "dubai",
+  "country": "united Arab emirates",
+  "Description":"is the most populous city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai. Established in the 18th century as a small fishing village, the city grew rapidly in the early 21st century into a cosmopolitan metropolis with a focus on tourism and hospitality. Dubai is one of the world's most popular tourist destinations[8] with the second most five-star hotels in the world, and the tallest building in the world, the Burj Khalifa.",
+  "URLpicture":"https://gulfbusiness.com/wp-content/uploads/2021/05/E1BAv5VXsAAFIJl.jpg",
+  "cityID": "DXB"
+ },
+ {
+  "city" : "khartoum",
+  "country": "sudan",
+  "Description":" is the capital of Sudan. With a population of 5,274,321, its metropolitan area is the largest in Sudan. Khartoum is located at the confluence of the White Nile, flowing north from Lake Victoria, and the Blue Nile, flowing west from Lake Tana in Ethiopia. The location where the two Niles meet is known as al-Mogran or al-Muqran . From there, the Nile continues to flow north towards Egypt and the Mediterranean Sea.",
+  "URLpicture":"https://cdn.jns.org/uploads/2020/11/Khartoumdowntown-2000x1125.jpg",
+  "cityID": "KRT"
+ },
+
+ {
+  "city" : "alger",
+  "country": "Algeria",
+  "Description":" is the largest country by total area in Africa, and by extension, the Arab world, and is bordered to the northeast by Tunisia; to the east by Libya; to the southeast by Niger; to the southwest by Mali, Mauritania, and Western Sahara; to the west by Morocco; and to the north by the Mediterranean Sea. The country has a semi-arid geography, with most of the population living in the fertile north and the Sahara dominating the geo",
+  "URLpicture":"http://www.algeriajourney.com/storage/app/media/alger%20blanche.jpg",
+  "cityID": "ALG"
+ },
+
+ {
+  "city" : "male",
+  "country": "maldives",
+  "Description":"is an archipelagic state in the Indian subcontinent of Asia, situated in the Indian Ocean. It lies southwest of Sri Lanka and India, about 700 kilometres (430 mi) from the Asian continent's mainland. The chain of 26 atolls stretches from Ihavandhippolhu Atoll in the north to Addu Atoll in the south (across the Equator)",
+  "URLpicture":"https://static1.evcdn.net/images/reduction/355607_w-700_h-438_q-50_m-crop.jpg",
+  "cityID": "MLE"
+ },
+
+ {
+  "city" : "casablanca",
+  "country": "Morocco",
+  "Description":"is the largest city of Morocco. Located on the Atlantic coast of the Chaouia plain in the central-western part of Morocco, it is the second largest city in the Maghreb region and the eighth-largest in the Arab world. Casablanca is Morocco's chief port and one of the largest financial centers in Africa. According to the 2019 population estimate, the city has a population of about 3.71 million in the urban area and over 4.27 million in the Greater Casablanca. ",
+  "URLpicture":"https://cdn.ek.aero/ly/english/images/Casablanca_959_tcm317-4552808.jpg",
+  "cityID": "CAS"
+ },
+ {
+  "city" : "seoul",
+  "country": "south korea",
+  "Description":"is the capital[7] and largest metropolis of South Korea. Seoul has a population of 9.7 million people, and forms the heart of the Seoul Capital Area with the surrounding Incheon metropolis and Gyeonggi province. ",
+  "URLpicture":"https://uceap.universityofcalifornia.edu/sites/default/files/marketing-images/program-page-images/seoul-summer-glance.jpg",
+  "cityID": "SEL"
+ },
+
+ {
+  "city" : "jeddah",
+  "country": "saudi arabia",
+  "Description":" is a city in the Hejaz region of Saudi Arabia and the country's commercial center. With a population of about 4,697,000 people as of 2021, Jeddah is the largest city in Makkah Province, the largest city in Hejaz, the second-largest city in Saudi Arabia (after the capital Riyadh), and the tenth-largest in the Middle East. Jeddah Islamic Port, located on the Red Sea, is the thirty-sixth largest seaport in the world[4] and the second-largest and second-busiest seaport in the Middle East (after Dubai's Port of Jebel Ali).",
+  "URLpicture":"https://www.sainternational.us/wp-content/uploads/2019/03/Living_in_Jeddah_Saudi_Arabia.jpg",
+  "cityID": "JED"
+
+ },
+
+ {
+  "city" : "beirut",
+  "country": "lebanon",
+  "Description":"is the capital and largest city of Lebanon. As of 2014, Greater Beirut has a population of 2.2 million, which makes it the third-largest city in the Levant region. The city is situated on a peninsula at the midpoint of Lebanon's Mediterranean coast. Beirut has been inhabited for more than 5,000 years, and was one of Phoenicia's most prominent city states, making it one of the oldest cities in the world. The first historical mention of Beirut is found in the Amarna letters from the New Kingdom of Egypt, which date to the 15th century BC.",
+  "URLpicture":"https://almzeed.com/wp-content/uploads/2017/06/beirut-1100-930x620.jpg",
+  "cityID": "BEY"
+ },
+
+ {
+  "city" : "nouakchott",
+  "country": "mauritania",
+  "Description":"is the capital and largest city of Mauritania. It is one of the largest cities in the Sahel. The city also serves as the administrative and economic center of Mauritania",
+  "URLpicture":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Nouakchott.jpg/800px-Nouakchott.jpg",
+  "cityID": "NKC"
+ },
+ {
+  "city" : "manama",
+  "country": "bahrain",
+  "Description":"is the capital and largest city of Bahrain, with an approximate population of 200,000 people as of 2020. Long an important trading center in the Persian Gulf, Manama is home to a very diverse population. After periods of Portuguese and Persian control and invasions from the ruling dynasties of Saudi Arabia and Oman, Bahrain established itself as an independent nation in 1971 after a period of British hegemony.",
+  "URLpicture":"https://upload.wikimedia.org/wikipedia/commons/f/f2/Bahrain_World_trade_Center_.jpg",
+  "cityID": "BAH"
+ },
+ {
+  "city": "kuala lumpur",
+  "country": "malaysia",
+  "Description": "is the capital and largest city of Bahrain, with an approximate population of 200,000 people as of 2020. Long an important trading center in the Persian Gulf, Manama is home to a very diverse population. After periods of Portuguese and Persian control and invasions from the ruling dynasties of Saudi Arabia and Oman, Bahrain established itself as an independent nation in 1971 after a period of British hegemony.",
+  "URLpicture": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/b1/ac/e8.jpg",
+  "cityID": "KUL"
+ },
+ {
+  "city" : "manila",
+  "country": "philippines",
+  "Description":" is the capital of the Philippines, and its second most populous city. It is highly urbanized and as of 2019 was the world's most densely populated city proper. It was the first chartered city in the country, designated as such by the Philippine Commission Act 183 of July 31, 1901. ",
+  "URLpicture":"https://cdn.britannica.com/s:690x388,c:crop/81/196781-050-CA29F2C8/Manila.jpg",
+  "cityID": "MNL"
+ },
+
+ {
+  "city" : "malta",
+  "country": "malta",
+  "Description":" is a Southern European island country consisting of an archipelago in the Mediterranean Sea. It lies 80 km (50 mi) south of Italy, 284 km (176 mi) east of Tunisia, and 333 km (207 mi) north of Libya.",
+  "URLpicture":"https://img.jakpost.net/c/2016/04/01/2016_04_01_2015_1459471102._large.jpg",
+  "cityID": "MLA"
+ },
+ {
+  "city" : "tirana",
+  "country": "albania",
+  "Description":"is the capital and largest city of Albania. It is located in the centre of the country, enclosed by mountains and hills with Dajti rising to the east and a slight valley to the northwest overlooking the Adriatic Sea in the distance",
+  "URLpicture":"https://cdn.britannica.com/s:690x388,c:crop/36/195936-050-7CF4E835/Tirana-Albania.jpg",
+  "cityID": "TIA"
+ },
+
+ {
+  "city" : "Doha",
+  "country": "Qatar",
+  "Description":"is the capital and most populous city of Qatar. It has a population of 956,460 (2015). The city is located on the coast of the Persian gulf in the east of the country, north of Al Wakrah and south of Al Khor. It is Qatar's fastest growing city, with over 80% of the nation's population living in Doha or its surrounding suburbs, and it is the political and economic center of the country.",
+  "URLpicture":"https://a.travel-assets.com/findyours-php/viewfinder/images/res70/481000/481987-Doha-And-Vicinity.jpg",
+  "cityID": "DOH"
+ },
+
+ {
+  "city" : "kuwait",
+  "country": "kuwait",
+  "Description":" is a country in Western Asia. It is situated in the northern edge of Eastern Arabia at the tip of the Persian Gulf, bordering Iraq to the north and Saudi Arabia to the south. Kuwait has a coastal length of approximately 499 km (310 mi). Most of the country's population reside in the urban agglomeration of the capital city Kuwait City.",
+  "URLpicture":"https://www.iflr.com/Media/images/iflr/1-cities/Kuwait.jpg",
+  "cityID": "KWI"
+ },
+
+ {
+  "city" : "niamey",
+  "country": "niamey",
+  "Description":" is the capital and largest city of Niger. Niamey lies on the Niger River, primarily situated on the east bank. Niamey's population was counted as 1,026,848 as of the 2012 census. As of 2017, population projections show the capital district growing at a slower rate than the country as a whole, which has the world's highest fertility rate.[4",
+  "URLpicture":"https://modo3.com/thumbs/fit630x300/3587/1553111973/%D8%B9%D8%A7%D8%B5%D9%85%D8%A9_%D8%A7%D9%84%D9%86%D9%8A%D8%AC%D8%B1.jpg",
+  "cityID": "NIM"
+ },
+ {
+  "city" : "sebha",
+  "country": "libya",
+  "Description":"is an oasis city in southwestern Libya, approximately 640 kilometres (400 mi) south of Tripoli. It was historically the capital of the Fezzan region and the Military Territory of Fezzan-Ghadames and is now capital of the Sabha District. Sabha Air Base, south of the city, is a Libyan Air Force installation that is home to multiple MiG-25 aircraft.",
+  "URLpicture":"https://www.libyaobserver.ly/sites/default/files/sabha252.jpg",
+  "cityID": "SEB"
+ },
+
+ {
+  "city" : "lome",
+  "country": "togo",
+  "Description":" is the capital and largest city of Togo. It has an urban population of 837,437 while there were 1,477,660 permanent residents in its metropolitan area as of the 2010 census. Located on the Gulf of Guinea, Lomé is the country's administrative and industrial center, which includes an oil refinery, and its chief port, where it exports coffee, cocoa, copra, and oil palm kernels.",
+  "URLpicture":"https://www.togofirst.com/media/k2/items/cache/cd28e7de42daec61e1a7b5cd2b05356d_L.jpg",
+  "cityID": "LFW"
+ },
+
+ {
+  "city" : "london",
+  "country": "United Kingdom",
+  "Description":" is the capital and largest city of England and the United Kingdom. The city stands on the River Thames in south-east England, at the head of its 50-mile (80 km) estuary leading to the North Sea. London has been a major settlement for two millennia.[10] The City of London, London's ancient core and financial centre, was founded by the Romans as Londinium",
+  "URLpicture":"https://voxcitywalks.com/wp-content/uploads/2020/10/london-2.jpg",
+  "cityID": "LON"
+ },
+
+ {
+  "city" : "zanzibar city",
+  "country": "tanzania",
+  "Description":"is an insular autonomous region of Tanzania. It is composed of the Zanzibar Archipelago in the Indian Ocean, 25–50 kilometres (16–31 mi) off the coast of the mainland, and consists of many small islands and two large ones: Unguja (the main island, referred to informally as Zanzibar) and Pemba Island. ",
+  "URLpicture":"https://image.shutterstock.com/image-photo/stone-town-zanzibar-600w-1062290876.jpg",
+  "cityID": "ZNZ"
+ },
+ {
+  "city" : "toronto",
+  "country": "canada",
+  "Description":"is the capital city of the Canadian province of Ontario. With a recorded population of 2,731,571 in 2016, it is the most populous city in Canada and the fourth most populous city in North America. The city is the anchor of the Golden Horseshoe, an urban agglomeration of 9,245,438 people (as of 2016) surrounding the western end of Lake Ontario, while the Greater Toronto Area (GTA) proper had a 2016 population of 6,417,516. Toronto is an international centre of business, finance, arts, and culture, and is recognized as one of the most multicultural and cosmopolitan cities in the world.",
+  "URLpicture":"https://i.natgeofe.com/n/20d65599-d2e3-49e7-9641-a10b25aa8df2/toronto-travel_4x3.jpg",
+  "cityID": "YTO"
+ },
+
+ {
+  "city" : "jakrta",
+  "country": "indonesia",
+  "Description":" is the centre of the economy, culture and politics of Indonesia. It has province level status which had a population of 10,562,088 as of 2020. Although Jakarta extends over only 699.5 square kilometres (270.1 sq mi), and thus has the smallest area of any Indonesian province, its metropolitan area covers 6,392 square kilometres (2,468 sq mi), and is the world's second-most populous urban area, after Tokyo. It has a population of about 35.934 million as of 2020.",
+  "URLpicture":"https://cdn.getyourguide.com/img/location/5c04f3f056fc8.jpeg/88.jpg",
+  "cityID": "JKT"
+ },
+
+ {
+  "city" : "riyadh",
+  "country": "saudi arabia",
+  "Description":" is the capital of Saudi Arabia and the largest city on the Arabian Peninsula. Located in the center of the an-Nafud desert, on the eastern part of the Najd plateau, the city sits at an average of 600 meters (2,000 ft) above sea level, and receives around 5 million tourists each year, making it the forty-ninth most visited city in the world and the 6th in the Middle East. Riyadh had a population of 7.6 million people in 2019, making it the most-populous city in Saudi Arabia, 3rd most populous in the Middle East, and 38th most populous in Asia.",
+  "URLpicture":"https://viavii.com/uploads/0000/608/2021/04/04/sa-062-dk-2012-1920x10801-1.jpeg",
+  "cityID": "RUH"
+ },
+
+ {
+  "city" : "Rome",
+  "country": "Italy",
+  "Description":" is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome, and a special comune named Comune di Roma Capitale. With 2,860,009 residents in 1,285 km2 (496.1 sq mi), Rome is the country's most populated comune and the third most populous city ",
+  "URLpicture":"https://gfe4.me/images/pages/big_2eaf5aa13a65026366e258b6c049ff847333c09c.jpg",
+  "cityID": "ROM"
+ },
+ {
+  "city" : "Kiev",
+  "country": "Ukraine",
+  "Description":" is the capital and most populous city of Ukraine. It is in north-central Ukraine along the Dnieper River. As of 1 January 2021 its population was 2,962,180 making Kyiv the seventh-most populous city in Europe.",
+  "URLpicture":"https://thumbs.dreamstime.com/z/kiev-ukraine-vozdvyzhenka-barrio-historical-city-center-luxury-neighborhood-dramatical-sunset-147277716.jpg",
+  "cityID": "IEV"
+ },
+
+ {
+  "city" : "Mumbai",
+  "country": "India",
+  "Description":"is the capital city of the Indian state of Maharashtra. According to the United Nations, as of 2018, Mumbai is the second-most populous city in the country after Delhi and the seventh-most populous city in the world with a population of roughly 20 million",
+  "URLpicture":"https://www.evisasindia.org/wp-content/uploads/sites/66/2020/04/mumbai-travel-guide.jpg",
+  "cityID": "BOM"
+ },
+
+ {
+  "city" : "Damascus",
+  "country": "Syrian arab republic",
+  "Description":"is the capital of Syria, the oldest capital in the world and the fourth holiest city in Islam. It became the country's largest city, following the Syrian Civil War, surpassing the northern city of Aleppo.",
+  "URLpicture":"https://image.shutterstock.com/image-photo/damascus-syria-02032020-panoramic-photo-260nw-1704353965.jpg",
+  "cityID": "DAM"
+ },
+
+ {
+  "city" : "Almadinah",
+  "country": "Saudia arabia",
+  "Description":" is the second holiest city in Islam and the capital of the Medina Province of Saudi Arabia. The 2020 estimated population of the city is 1,488,782, making it the fourth-most populous city in the country. Located at the core of the Medina Province in the western reaches of the country, the city is distributed over 589 square kilometers (227 square miles), 293 km2 (117 sq. mi.) of which constitutes the city's urban area, while the rest is occupied by the Hejaz mountain range, empty valleys, agricultural spaces and older dormant volcanoes.",
+  "URLpicture":"https://www.visitsaudi.com/content/dam/no-dynamic-media-folder/manifest-batch3b/destination-page--medina-/destination_page_medina_map__1.jpg",
+  "cityID": "MED"
+ },
+ {
+  "city" : "Belgrade",
+  "country": "Serbia",
+  "Description":"is the capital and largest city of Serbia. It is located at the confluence of the Sava and Danube rivers and the crossroads of the Pannonian Plain and the Balkan Peninsula. Nearly 1.7 million people live within the administrative limits of the City of Belgrade.",
+  "URLpicture":"https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2016/09/05164719/Belgrade-River-Sava.jpg",
+  "cityID": "BEG"
+ },
+
+
+
+ {
+  "city" : "bali",
+  "country": "indonesia",
+  "Description":"is the most populous city in the Lesser Sunda Islands and the second-largest, after Makassar, in Eastern Indonesia. The upland town of Ubud is considered Bali's cultural centre. The province is Indonesia's main tourist destination, with a significant rise in tourism since the 1980s. Tourism-related business makes up 80% of its economy.",
+  "URLpicture":"https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg",
+  "cityID": "DPS"
+ },
+
+ {
+  "city" : "djerba",
+  "country": "tunisia",
+  "Description":"is, at 514 square kilometers (198 sq mi), is a Tunisian island and the largest island of North Africa, in the Gulf of Gabès, off the coast of Tunisia. It had a population of 139,544 at the 2004 census, which rose to 163,726 at the 2014 census",
+  "URLpicture":"https://www.jumelages-partenariats.com/admin/ckeditor/fileman/Uploads/156292126689_content.jpg",
+  "cityID": "DJE"
+ },
+ {
+  "city" : "erbil",
+  "country": "Iraq",
+  "Description":"is the capital and most populated city in the Kurdistan Region of Iraq. It has around 1.5 million inhabitants, while Erbil Governorate has 2,932,800 inhabitants as of 2020.",
+  "URLpicture":"https://adventuresoflilnicki.com/wp-content/uploads/2020/08/Erbil-Iraqi-Kurdistan-2.jpg",
+  "cityID": "EBL"
+ },
+
+ {
+  "city" : "sarajevo",
+  "country": "bosnia and herzegovina",
+  "Description":" is the capital and largest city of Bosnia and Herzegovina, with a population of 275,569 in its administrative limits. The Sarajevo metropolitan area including Sarajevo Canton, East Sarajevo and nearby municipalities is home to 555,210 inhabitants",
+  "URLpicture":"https://a.cdn-hotels.com/gdcs/production142/d1349/fec035f2-2e6c-4c8c-b973-23fed39bd028.jpg",
+  "cityID": "SJJ"
+ },
+
+ {
+  "city" : "tobruk",
+  "country": "libya",
+  "Description":"is a port city on Libya's eastern Mediterranean coast, near the border with Egypt. It is the capital of the Butnan District (formerly Tobruk District) and has a population of 120,000 (2011 est.).",
+  "URLpicture":"https://serturista.com/wp-content/uploads/2010/01/tobruk1.jpg",
+  "cityID": "TOB"
+ },
+
+ {
+  "city" : "berlin",
+  "country": "germany",
+  "Description":"is the capital and largest city of Germany by both area and population. Its 3.8 million inhabitants make it the European Union's most populous city, according to population within city limits.",
+  "URLpicture":"https://www.bain.com/contentassets/2ef1050396df402f80c83c3d12c46686/local-office-images-berlin-1440x810.jpg",
+  "cityID": "BER"
+ },
+ {
+  "city" : "accra",
+  "country":" ghana",
+  "Description":"is the capital of Ghana covering an area of 225.67 km2 (87.13 sq mi) with an estimated urban population of 4.2 million as of 2020. It is organized into 12 local government districts – 11 municipal districts and the Accra Metropolitan District, which is the only district within the capital to be granted city status.",
+  "URLpicture":"https://resilientcitiesnetwork.org/wp-content/uploads/2020/08/n-accra-cityphoto.jpg",
+  "cityID": "ACC"
+ },
+
+ {
+  "city" : "milan",
+  "country": "italy",
+  "Description":"is a city in northern Italy, capital of Lombardy, and the second-most populous city proper in Italy after Rome. It is the only European city with GDP greater than its corresponding national capital's. ",
+  "URLpicture":"https://www.wantedinmilan.com/i/preview/storage/uploads/2019/05/Wellbeing_City_for_2019_Milan.jpg",
+  "cityID": "MIL"
+ },
+
+ {
+  "city" : "dominica",
+  "country": "dominica",
+  "Description":"is an island country in the Caribbean. The capital, Roseau, is located on the western side of the island. It is geographically situated as part of the Windward Islands chain in the Lesser Antilles archipelago in the Caribbean Sea. The island is surrounded by the Republic of France with Guadeloupe to the northwest and Martinique to the south-southeast. Its area is 750 km2 (290 sq mi), and the highest point is Morne Diablotins, at 1,447 m (4,747 ft) in elevation",
+  "URLpicture":"https://best-citizenships.com/wp-content/uploads/2018/11/Dominica-1000x658.jpg",
+  "cityID": "DOM"
+ },
+
+ {
+  "city" : "tokyo",
+  "country": "japan",
+  "Description":"is the capital and most populous prefecture of Japan. Located at the head of Tokyo Bay, the prefecture forms part of the Kantō region on the central Pacific coast of Japan's main island of Honshu. Tokyo is the political and economic center of the country, as well as the seat of the Emperor of Japan and the national government.",
+  "URLpicture":"https://lp-cms-production.imgix.net/2021-02/Tokyo%20Main.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=75&dpr=1",
+  "cityID": "TYO"
+ },
+ {
+  "city" : "abu dhabi ",
+  "country": "united arab emirates",
+  "Description":" is the capital and the second-most populous city of the United Arab Emirates (after Dubai). The city of Abu Dhabi is located on an island in the Persian Gulf, off the Central West Coast. Most of the city and the Emirate reside on the mainland connected to the rest of the country. As of 2020, Abu Dhabi's urban area had an estimated population of 1.48 million, out of 2.9 million in the emirate of Abu Dhabi, as of 2016",
+  "URLpicture":"https://sununiversaltourism.com/wp-content/uploads/2021/05/ABU-DHABI.jpg",
+  "cityID": "AUH"
+ },
+
+ {
+  "city" : "ercan",
+  "country":"cyprus ",
+  "Description":"is the primary civilian airport of Northern Cyprus, a country solely recognised by Turkey. It is located about 13 kilometres (8.1 mi) east of North Nicosia, near the village of Tymbou.",
+  "URLpicture":"https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F60896d64ea98513b4cd7bb3f%2FCyprus-is-the-latest-EU-state-to-open-its-borders--from-mid-May%2F960x0.jpg%3Ffit%3Dscale",
+  "cityID": "ECN"
+ },
+
+ {
+  "city" : "sharm elsheikh ",
+  "country": "egypt",
+  "Description":" is an Egyptian city on the southern tip of the Sinai Peninsula, in South Sinai Governorate, on the coastal strip along the Red Sea. Its population is approximately 73,000 as of 2015. Sharm El Sheikh is the administrative hub of Egypt's South Sinai Governorate, which includes the smaller coastal towns of Dahab and Nuweiba as well as the mountainous interior, St. Catherine and Mount Sinai. ",
+  "URLpicture":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/bc/d4/96/rixos-sharm-el-sheikh.jpg?w=900&h=-1&s=1",
+  "cityID": "SSH"
+ },
+
+ {
+  "city" : "athens",
+  "country": "greece",
+  "Description":" is the capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence starting somewhere between the 11th and 7th millennium BC.[",
+  "URLpicture":"https://lp-cms-production.imgix.net/2021-05/shutterstockRF_1193397715.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=75&dpr=1",
+  "cityID": "ATH"
+ },
+
+ {
+  "city" : "new delhi",
+  "country": "india",
+  "Description":"is the capital of India and an administrative district of the National Capital Territory of Delhi. New Delhi is the seat of all three branches of the government of India, hosting the Rashtrapati Bhavan, Parliament House, and the Supreme Court of India.",
+  "URLpicture":"https://cdn.getyourguide.com/img/location/533591d4b943b.jpeg/88.jpg",
+  "cityID": "DEL"
+ },
+
+ {
+  "city" : "lagos",
+  "country": "nigeria",
+  "Description":"is the most populous city in Africa with a population of 14.8 million as of 2015 within the city proper. The Lagos metropolitan area has a total population of roughly 23.5 million as of 2018, making it the most populous conurbation in Africa.Lagos is a major African financial centre and is the economic hub of Lagos State and Nigeria at large. ",
+  "URLpicture":"https://wpcdn.zenger.news/wp-content/uploads/2021/07/02112530/210802_N_Nigeria_01.jpg",
+  "cityID": "LOS"
+ },
+ {
+  "city" : "minsk",
+  "country": "belarus",
+  "Description":"is the capital and the largest city of Belarus, located on the Svislač and the Niamiha rivers. As the capital, Minsk has a special administrative status in Belarus and is the administrative centre of Minsk Region (voblasć) and Minsk District (rajon). As of January 2018, its population was 1,982,444,[4] (not including suburbs), making Minsk the 11th most populous city in Europe. ",
+  "URLpicture": "https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2017/07/04194812/shutterstock_343693049-870x400.jpg",
+  "cityID": "MSQ"
+ },
+ {
+"city" : "moscow",
+"country": "russian federation",
+"Description":" is the capital and largest city of Russia. The city stands on the Moskva River in Central Russia, with a population estimated at 12.4 million residents within the city limits, over 17 million residents in the urban area,and over 20 million residents in the metropolitan area.https://www.challenge-family.com/wp-content/uploads/2021/02/moscow-small.jpg",
+"URLpicture":"https://www.flytap.com/-/media/Flytap/new-tap-pages/destinations/europe/russia/moscow/destinations-moscow-banner-mobile-1024x553.jpg",
+  "cityID": "MOW"
+},
+ {
+"city" : "garden city",
+"country": "united states",
+"Description":" is a city in, and the county seat of, Finney County, Kansas, United States.As of the 2020 census, the population of the city was 28,151.The city is home to Garden City Community College and the Lee Richardson Zoo, the largest zoological park in western Kansas.",
+"URLpicture":"https://upload.wikimedia.org/wikipedia/commons/6/61/Cradle_of_Aviation_Museum_crop.jpg",
+  "cityID": "GCK"
+},
+ {
+"city" : "seychelles",
+"country": "seychelles",
+"Description":" is an archipelagic island country in the Indian Ocean at the eastern edge of the Somali Sea. It consists of 115 islands. Its capital and largest city, Victoria, is 1,500 kilometres (932 mi) east of mainland Africa. Other nearby island countries and territories include the Comoros, Madagascar, Mauritius, and the French overseas regions of Mayotte and Réunion to the south; and Maldives and the Chagos Archipelago (administered by the United Kingdom as the British Indian Ocean Territory) to the east. Its estimated population of 98,462 is the smallest population of any sovereign African country.",
+"URLpicture":"https://mk0woimaxyxm3s497uh.kinstacdn.com/wp-content/uploads/2019/08/Landscape-of-The-Seychelles-Drowning-in-Waste-WOIMA-Corporation.jpg",
+  "cityID": "SEZ"
+},
+ {
+"city" : "Paris",
+"country": "France",
+"Description":" is the capital and most populous city of France, with an estimated population of 2,175,601 residents as of 2018, in an area of more than 105 square kilometres (41 square miles). Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, gastronomy, science, and arts. The City of Paris is the centre and seat of government of the region and province of Île-de-France, or Paris Region, which has an estimated population of 12,174,880, or about 18 percent of the population of France as of 2017.The Paris Region had a GDP of €709 billion ($808 billion) in 2017",
+"URLpicture":"https://upload.travelawaits.com/ta/uploads/2021/04/eiffel-tower-800x800.jpg",
+  "cityID": "PAR"
+},
+ {
+"city" : "New York",
+"country": "United States",
+"Description":" is the most populous city in the United States. With a 2020 population of 8,804,190 distributed over 300.46 square miles (778.2 km2),[2] New York City is also the most densely populated major city in the United States.",
+"URLpicture":"https://www.northstarmeetingsgroup.com/uploadedImages/Articles/News/Industry/Skyline-Bridge-Brooklyn-NYC-Julienne-Schaer(1).jpg?width=920&scale=both&mode=crop",
+  "cityID": "NYC"
+},
+ {
+"city" : "Frankfurt",
+"country": "Germany",
+"Description":" is the most populous city in the German state of Hesse. Its 763,380 inhabitants as of 31 December 2019 make it the fifth-most populous city in Germany. On the river Main (a tributary of the Rhine), it forms a continuous conurbation with the neighboring city of Offenbach am Main and its urban area has a population of 2.3 million.",
+"URLpicture":"https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6f/5e/55.jpg",
+  "cityID": "FRA"
+},
+ {
+"city" : "Montreal",
+"country": "Canada",
+"Description":"is the second-most populous city in Canada and most populous city in the Canadian province of Quebec. Founded in 1642 as Ville-Marie, or 'City of Mary'it is named after Mount Royal,the triple-peaked hill in the heart of the city.",
+"URLpicture":"https://cw-gbl-gws-prod.azureedge.net/-/media/cw/americas/canada/office-pages/montreal-hero-desktop-new.jpg?sc=0.75&rev=50d82a2a23914cb583d739bb486238ae&hash=B9CBC06451E10E70EC2DCB4FB4203632",
+  "cityID": "YMQ"
+}
+
+]

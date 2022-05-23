@@ -1,0 +1,89 @@
+[
+
+  {
+    "airport_name":"Mitiga International Airport",
+    "iata_code": "MJI",
+    "city": "Tripoli",
+    "country": "Libya"
+  },
+
+  {
+  "airport_name":"Benina International Airport",
+  "iata_code": "BEN",
+  "city": "Benghazi",
+  "country": "Libya"
+},
+
+
+{
+  "airport_name":"Istanbul International Airport",
+  "iata_code": "IST",
+  "city": "Istanbul",
+  "country": "Turkey"
+},
+
+{
+  "airport_name":"Tunis-Carthage International Airport",
+  "iata_code": "TUN",
+  "city": "Tunis",
+  "country": "Tunisia"
+},
+
+  {
+    "airport_name":"Sfax–Thyna International Airport",
+    "iata_code": "SFA",
+    "city": "Sfax",
+    "country": "Tunisia"
+  },
+
+  {  "airport_name":"Misurata International Airport",
+    "iata_code": "MRA",
+    "city": "Misurata",
+    "country": "Libya"
+  },
+
+  {
+    "airport_name":"Sabha Airport",
+    "iata_code": "SEB",
+    "city": "Sabha",
+    "country": "Libya"
+  },
+
+  {
+    "airport_name":"Xi'an Xianyang International Airport",
+    "iata_code": "XIA",
+    "city": "Shaanxi",
+    "country": "China"
+  },
+
+  {
+    "airport_name":"Shanghai Hongqiao International Airport",
+    "iata_code": "SHA",
+    "city": "Shanghai",
+    "country": "China"
+  },
+  {
+    "airport_name":"Frankfurt Airport",
+    "iata_code": "FRA",
+    "city": "Frankfurt",
+    "country": "Germany"
+  },
+  {
+    "airport_name":"Limbang Airport",
+    "iata_code": "LMN",
+    "city": "Limbang",
+    "country": "Malaysia"
+  },
+  {
+    "airport_name":"Mitiga International Airport",
+    "iata_code": "BRU",
+    "city": "Tripoli",
+    "country": "Libya"
+  },
+  {
+    "airport_name":"Mitiga International Airport",
+    "iata_code": "KUL",
+    "city": "Tripoli",
+    "country": "Libya"
+  }
+]

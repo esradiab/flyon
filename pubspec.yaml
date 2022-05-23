@@ -1,0 +1,442 @@
+name: untitled
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  expandable_text: ^2.2.0
+  webview_flutter: ^2.0.12
+  carousel_slider: ^4.0.0
+  intl: ^0.17.0
+  flutter_typeahead: ^3.2.1
+  http: ^0.13.3
+  provider: ^6.0.0
+
+
+  # The following adds the Cupertino Icons fonts to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons fonts is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  assets:
+    - images/home.jpg
+    - images/befor.jpg
+    - images/bans.jpg
+    - images/luggage.jpg
+    - images/health.jpg
+    - images/4points/01.jpg
+    - images/4points/02.jpg
+    - images/4points/03.jpg
+    - images/4points/04.jpg
+    - images/4points/05.jpg
+    - images/4points/06.jpg
+    - images/4points/07.jpg
+    - images/4points/08.jpg
+    - images/4season/01.jpg
+    - images/4season/02.jpg
+    - images/4season/03.jpg
+    - images/4season/04.jpg
+    - images/4season/05.jpg
+    - images/4season/06.jpg
+    - images/4season/07.jpg
+    - images/akakus/01.jpg
+    - images/akakus/02.jpg
+    - images/akakus/03.jpg
+    - images/akakus/04.jpg
+    - images/akakus/05.jpg
+    - images/akakus/06.jpg
+    - images/akakus/07.jpg
+    - images/akakus/08.jpg
+    - images/alkaws/01.jpg
+    - images/alkaws/02.jpg
+    - images/alkaws/03.jpg
+    - images/alkaws/04.jpg
+    - images/alkaws/05.jpg
+    - images/alkaws/06.jpg
+    - images/alkaws/07.jpg
+    - images/alkaws/08.jpg
+    - images/alkaws/09.jpg
+    - images/alkaws/010.jpg
+    - images/alkaws/011.jpg
+    - images/alkaws/012.jpg
+    - images/alkaws/013.jpg
+    - images/alkaws/014.jpg
+    - images/alkaws/015.jpg
+    - images/alkaws/016.jpg
+    - images/alkaws/017.jpg
+    - images/alkaws/018.jpg
+    - images/alokhwa/01.png
+    - images/alokhwa/02.jpg
+    - images/alokhwa/03.jpg
+    - images/alokhwa/04.png
+    - images/alsafwa/01.jpg
+    - images/alsafwa/02.jpg
+    - images/alsafwa/03.jpg
+    - images/alsafwa/04.jpg
+    - images/alsafwa/05.jpg
+    - images/alsafwa/06.jpg
+    - images/alsafwa/07.jpg
+    - images/alsafwa/08.jpg
+    - images/altawfek/01.jpg
+    - images/altawfek/02.jpg
+    - images/altawfek/03.jpg
+    - images/altawfek/04.jpg
+    - images/altawfek/05.jpg
+    - images/altawfek/06.jpg
+    - images/altawfek/07.jpg
+    - images/altawfek/08.jpg
+    - images/altawfek/09.jpg
+    - images/altawfek/010.jpg
+    - images/altawfek/011.jpg
+    - images/altawfek/012.jpg
+    - images/altawfek/013.jpg
+    - images/altawfek/014.jpg
+    - images/altawfek/015.jpg
+    - images/altawfek/016.jpg
+    - images/alwedan/01.jpg
+    - images/alwedan/02.jpg
+    - images/alwedan/03.jpg
+    - images/alwedan/04.jpg
+    - images/alwedan/05.jpg
+    - images/alwedan/06.jpg
+    - images/alwedan/01.jpg
+    - images/alwedan/02.jpg
+    - images/alwedan/03.jpg
+    - images/alwedan/04.jpg
+    - images/alwedan/05.jpg
+    - images/alwedan/06.jpg
+    - images/babalbahr/01.jpg
+    - images/babalbahr/02.jpg
+    - images/babalbahr/03.jpg
+    - images/babalbahr/04.jpg
+    - images/babalbahr/05.jpg
+    - images/babalbahr/05.jpg
+    - images/babalbahr/06.jpg
+    - images/babalbahr/08.jpg
+    - images/babalbahr/09.jpg
+    - images/babalbahr/010.jpg
+    - images/blasma/01.jpg
+    - images/blasma/02.jpg
+    - images/blasma/03.jpg
+    - images/blasma/04.jpg
+    - images/blasma/05.jpg
+    - images/blasma/06.jpg
+    - images/blasma/07.jpg
+    - images/blasma/08.jpg
+    - images/blasma/09.jpg
+    - images/blasma/010.jpg
+    - images/blasma/011.jpg
+    - images/blasma/012.jpg
+    - images/blasma/013.jpg
+    - images/corenthia/01.jpg
+    - images/corenthia/02.jpg
+    - images/corenthia/03.jpg
+    - images/corenthia/04.jpg
+    - images/corenthia/05.jpg
+    - images/corenthia/06.jpg
+    - images/corenthia/08.jpg
+    - images/corenthia/09.jpg
+    - images/corenthia/010.jpg
+    - images/corenthia/011.jpg
+    - images/corenthia/012.jpg
+    - images/corenthia/013.jpg
+    - images/corenthia/014.jpg
+    - images/corenthia/015.jpg
+    - images/corenthia/016.jpg
+    - images/corenthia/017.jpg
+    - images/corenthia/018.jpg
+    - images/corenthia/019.jpg
+    - images/corenthia/020.jpg
+    - images/corenthia/021.jpg
+    - images/corenthia/022.jpg
+    - images/corenthia/023.jpg
+    - images/corenthia/024.jpg
+    - images/corenthia/025.jpg
+    - images/corenthia/027.jpg
+    - images/corenthia/028.jpg
+    - images/corenthia/029.jpg
+    - images/corenthia/030.jpg
+    - images/corenthia/031.jpg
+    - images/corenthia/032.jpg
+    - images/corenthia/033.jpg
+    - images/corenthia/034.jpg
+    - images/corenthia/035.jpg
+    - images/corenthia/036.jpg
+    - images/corenthia/037.jpg
+    - images/corenthia/038.jpg
+    - images/corenthia/039.jpg
+    - images/corenthia/040.jpg
+    - images/corenthia/41.jpg
+    - images/haroon/01.jpg
+    - images/haroon/02.jpg
+    - images/haroon/03.jpg
+    - images/haroon/04.jpg
+    - images/haroon/05.jpg
+    - images/haroon/06.jpg
+    - images/haroon/07.jpg
+    - images/haroon/08.jpg
+    - images/haroon/09.jpg
+    - images/haroon/010.jpg
+    - images/haroon/011.jpg
+    - images/haroon/011.jpg
+    - images/haroon/012.jpg
+    - images/haroon/013.jpg
+    - images/haroon/014.jpg
+    - images/haroon/015.jpg
+    - images/haroon/016.jpg
+    - images/haroon/017.jpg
+    - images/haroon/018.jpg
+    - images/haroon/019.jpg
+    - images/haroon/020.jpg
+    - images/haroon/021.jpg
+    - images/haroon/022.jpg
+    - images/haroon/022.jpg
+    - images/haroon/023.jpg
+    - images/haroon/024.jpg
+    - images/haroon/025.jpg
+    - images/haroon/026.jpg
+    - images/haroon/027.jpg
+    - images/oya/01.jpg
+    - images/oya/02.jpg
+    - images/oya/03.jpg
+    - images/oya/04.jpg
+    - images/oya/05.jpg
+    - images/oya/06.jpg
+    - images/oya/07.jpg
+    - images/oya/08.jpg
+    - images/oya/09.jpg
+    - images/oya/010.jpg
+    - images/oya/011.jpg
+    - images/oya/012.jpg
+    - images/oya/013.jpg
+    - images/oya/014.jpg
+    - images/oya/015.jpg
+    - images/oya/016.jpg
+    - images/oya/017.jpg
+    - images/radisonblue/01.jpg
+    - images/radisonblue/03.jpg
+    - images/radisonblue/04.jpg
+    - images/radisonblue/05.jpg
+    - images/radisonblue/06.jpg
+    - images/radisonblue/07.jpg
+    - images/radisonblue/08.jpg
+    - images/radisonblue/09.jpg
+    - images/radisonblue/010.jpg
+    - images/radisonblue/011.jpg
+    - images/radisonblue/012.jpg
+    - images/radisonblue/013.jpg
+    - images/radisonblue/014.jpg
+    - images/radisonblue/015.jpg
+    - images/radisonblue/016.jpg
+    - images/radisonblue/017.jpg
+    - images/radisonblue/019.jpg
+    - images/radisonblue/020.jpg
+    - images/radisonblue/021.jpg
+    - images/radisonblue/022.jpg
+    - images/radisonblue/023.jpg
+    - images/radisonblue/024.jpg
+    - images/radisonblue/024.jpg
+    - images/radisonblue/025.jpg
+    - images/radisonblue/026.jpg
+    - images/radisonblue/027.jpg
+    - images/radisonblue/028.jpg
+    - images/radisonblue/029.jpg
+    - images/radisonblue/030.jpg
+    - images/radisonblue/031.jpg
+    - images/rg/01.jpg
+    - images/rg/02.jpg
+    - images/rg/03.jpg
+    - images/rg/04.jpg
+    - images/rg/05.jpg
+    - images/rg/06.jpg
+    - images/rg/07.jpg
+    - images/rg/08.jpg
+    - images/rg/09.jpg
+    - images/rg/010.jpg
+    - images/rg/011.jpg
+    - images/rg/012.jpg
+    - images/rg/013.jpg
+    - images/rixos/01.jpg
+    - images/rixos/02.jpg
+    - images/rixos/03.jpg
+    - images/rixos/04.jpg
+    - images/rixos/05.jpg
+    - images/rixos/06.jpg
+    - images/rixos/07.jpg
+    - images/rixos/08.jpg
+    - images/rixos/09.jpg
+    - images/rixos/010.jpg
+    - images/rixos/011.jpg
+    - images/rixos/012.jpg
+    - images/rixos/013.jpg
+    - images/rixos/014.jpg
+    - images/rixos/015.jpg
+    - images/rixos/016.jpg
+    - images/rixos/017.jpg
+    - images/rixos/018.jpg
+    - images/sahralibya/01.jpg
+    - images/sahralibya/02.jpg
+    - images/sahralibya/03.jpg
+    - images/sahralibya/04.jpg
+    - images/sahralibya/05.jpg
+    - images/sahralibya/06.jpg
+    - images/sahralibya/07.jpg
+    - images/sahralibya/08.jpg
+    - images/sahralibya/09.jpg
+    - images/sahralibya/010.jpg
+    - images/sahralibya/011.jpg
+    - images/sahralibya/012.jpg
+    - images/sahralibya/013.jpg
+    - images/sahralibya/014.jpg
+    - images/tubacts/01.jpg
+    - images/tubacts/02.jpg
+    - images/tubacts/03.jpg
+    - images/tubacts/04.jpg
+    - images/tubacts/05.jpg
+    - images/tubacts/06.jpg
+    - images/tubacts/07.jpg
+    - images/tubacts/08.jpg
+    - images/tubacts/09.jpg
+    - images/tubacts/010.jpg
+    - images/tubacts/011.jpg
+    - images/tubacts/012.jpg
+    - images/tubacts/013.jpg
+    - images/tubacts/014.jpg
+    - images/tubacts/015.jpg
+    - images/vectoria/01.jpg
+    - images/vectoria/02.jpg
+    - images/vectoria/03.jpg
+    - images/vectoria/04.jpg
+    - images/vectoria/05.jpg
+    - images/vectoria/06.jpg
+    - images/vectoria/07.jpg
+    - images/vectoria/08.jpg
+    - images/vectoria/09.jpg
+    - images/vectoria/010.jpg
+    - images/vectoria/011.jpg
+    - images/vectoria/012.jpg
+    - images/vectoria/013.jpg
+    - images/vectoria/014.jpg
+    - images/vectoria/015.jpg
+    - images/vectoria/016.jpg
+    - images/vectoria/017.jpg
+    - images/vectoria/018.jpg
+    - images/vectoria/019.jpg
+    - images/zumit/01.jpg
+    - images/zumit/02.jpg
+    - images/zumit/03.jpg
+    - images/zumit/04.jpg
+    - images/zumit/05.jpg
+    - images/zumit/06.jpg
+    - images/zumit/08.jpg
+    - images/airways/buraq.jpg
+    - images/airways/buraq1.jpg
+    - images/airways/libyan.jpg
+    - images/airways/libyan1.jpg
+    - images/airways/libyawings.jpg
+    - images/airways/libyawings.png
+    - images/airways/afreqia1.jpg
+    - images/airways/afriqia.jpg
+    - images/location/akakos2.png
+    - images/location/alkaws.png
+    - images/location/babalbahr.png
+    - images/location/blazma.png
+    - images/location/coronthia.png
+    - images/location/elokhwa.png
+    - images/location/eltawfek.png
+    - images/location/elwedan.png
+    - images/location/fourpoints.png
+    - images/location/fourseasson.png
+    - images/location/haroon.png
+    - images/location/oya.png
+    - images/location/radisonblue.png
+    - images/location/rixos.png
+    - images/location/royalgarden.png
+    - images/location/safwa.png
+    - images/location/sahralibya.png
+    - images/location/tobaktes.png
+    - images/location/victoria.png
+    - images/location/zomit.png
+    - json/hotels.json
+    - json/airway.json
+    - json/destinations.json
+    - json/airports.json
+    - json/prices/8U.json
+    - json/prices/YL.json
+    - json/prices/LN.json
+    - json/prices/UZ.json
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the fonts family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the fonts. For
+  # example:
+  fonts:
+    - family: Allison
+      fonts:
+        - asset: fonts/Allison/Allison-Regular.ttf
+    - family: Lobster
+      fonts:
+        - asset: fonts/Lobster/Lobster-Regular.ttf
+    - family: Lora
+      fonts:
+        - asset: fonts/Lora/Static/Lora-Bold.ttf
+        - asset: fonts/Lora/Static/Lora-BoldItalic.ttf
+        - asset: fonts/Lora/Static/Lora-Italic.ttf
+        - asset: fonts/Lora/Static/Lora-Medium.ttf
+        - asset: fonts/Lora/Static/Lora-MediumItalic.ttf
+        - asset: fonts/Lora/Static/Lora-Regular.ttf
+        - asset: fonts/Lora/Static/Lora-SemiBold.ttf
+        - asset: fonts/Lora/Static/Lora-SemiBoldItalic.ttf
+    - family: Kaisei HarunoUmi
+      fonts:
+        - asset: fonts/Kaisei_HarunoUmi/KaiseiHarunoUmi-Bold.ttf
+        - asset: fonts/Kaisei_HarunoUmi/KaiseiHarunoUmi-Medium.ttf
+        - asset: fonts/Kaisei_HarunoUmi/KaiseiHarunoUmi-Regular.ttf
+
+
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

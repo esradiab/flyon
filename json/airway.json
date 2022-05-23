@@ -1,0 +1,52 @@
+[
+  {
+    "name": "libyan airlines",
+    "id": "LN",
+    "description": "Libyan airlines came into being as the national carrier in 1964. Under the name of “Kingdom of Libya Airlines”, the company has been a steadfast symbol of stability, national unity and competence, Despite changes to the company name, becoming “Libyan Arab Airlines’ in 1970 and latterly “Libyan Airlines”, and to the logo, our commitment to excellence has always remained.",
+    "pic": [
+      "images/airways/libyan.jpg",
+      "images/airways/libyan1.jpg"
+    ],
+    "phone": "00218923346101\n00218213346105\n00218923346102\n00218213346102",
+    "website": "https://www.libyanairlines.aero",
+    "airport":"Mitiga International Airport in Tripoli"
+},
+  {
+    "name": "libyan wings",
+    "id": "YL",
+    "description": "Libyan Wings Airlines Co JSC: or Libyan Wings , is an airline with its head office on the grounds of Mitiga International Airport in Tripoli, Libya.[3] It started operations in September 2015 after facing delays because of political instability in Libya. As of January 2020, the airline operates four Airbus A319s to four destinations in Libya, Tunisia and Turkey",
+    "pic": [
+      "images/airways/libyawings.png",
+      "images/airways/libyawings.jpg"
+
+    ],
+    "phone": "+ 218 21 351 46 01 \n +218 21 351 46 02 \n + 218 351 46 03 \n + 218 351 46 04 \n +218 351 46 05",
+    "website": "https://libyanwings.ly",
+    "airport": "Mitiga International Airport in Tripoli"
+  },
+
+  {
+    "name": "alburaq",
+    "id": "UZ",
+    "description": "Buraq Air (El-Buraq Air Transport Inc) is an airline with its headquarters on the grounds of Mitiga International Airport in Tripoli, Libya.[3] It currently operates a minor international scheduled network and additional charter services and flights in support of CHC.The airline's base is Mitiga International Airport as the larger Tripoli International Airport hasn't been operational since several years.",
+    "pic": [
+      "images/airways/buraq.jpg",
+      "images/airways/buraq1.jpg"
+    ],
+    "phone": "+218 21 3500821 / +218 21 3509807",
+    "website":"http://buraq.aero/ar/",
+    "airport": "Mitiga International Airport in Tripoli"
+  },
+  {
+    "name": "Afriqiyah airlines",
+    "id": "8U",
+    "description": "Afriqiyah Airways is a Libyan airline based in Tripoli. The company is headquartered in Maitika International Airport. Its flights also depart from the airports of Misurata and Benghazi. The company operates domestic flights in Libya and international flights to Tunisia, Turkey, Egypt, Jordan, Sudan and Niger.\n\nThe number of African passengers in 2009 is estimated to be over one million passengers. The company's revenue in 2006 amounted to 120 million dollars.",
+    "pic": [
+      "images/airways/afriqia.jpg",
+      "images/airways/afreqia1.jpg"
+    ],
+    "phone": "+218 21-7159831",
+    "website": "https://afriqiyah.aero/",
+    "airport": "Mitiga International Airport in Tripoli"
+  }
+]
