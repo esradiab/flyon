@@ -2,9 +2,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:untitled/model/passengersmodel.dart';
-import 'package:untitled/passenger.dart';
+import 'package:untitled/pages/flights/passenger.dart';
 
-import '../../selectairport.dart';
+import '../../pages/flights/selectairport.dart';
 import 'searchflights.dart';
 
 class OneWay extends StatefulWidget {

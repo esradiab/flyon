@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/model/passengersmodel.dart';
 
-import '../../passenger.dart';
-import '../../selectairport.dart';
+import '../../pages/flights/passenger.dart';
+import '../../pages/flights/selectairport.dart';
 
 class RoundTrip extends StatefulWidget{
   @override

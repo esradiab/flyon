@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'model/passengersmodel.dart';
+import '../../model/passengersmodel.dart';
 class Passenger extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

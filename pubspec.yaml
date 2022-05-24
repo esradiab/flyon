@@ -30,6 +30,7 @@ dependencies:
   flutter_typeahead: ^3.2.1
   http: ^0.13.3
   provider: ^6.0.0
+  email_auth: ^1.0.0
 
 
   # The following adds the Cupertino Icons fonts to your application.

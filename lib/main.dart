@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bottombar.dart';
+import 'pages/bottombar.dart';
 
 //run the app..
 void main() => runApp(MyApp());
