@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:untitled/pages/flights/otp_verify_email.dart';
 
 class PassengerInformation extends StatefulWidget {
   final airwayId, flightId, from, to;
@@ -264,12 +265,13 @@ class _PassengerInformation extends State<PassengerInformation> {
                           height: 10,
                         ),
                         TextFormField(
-                          autovalidateMode: AutovalidateMode.always, keyboardType: TextInputType.emailAddress,
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          keyboardType: TextInputType.emailAddress,
                           textInputAction: TextInputAction.next,
+                          controller: _emailController ,
                           onChanged: (value) {
                             email = _emailController.text;
                           },
-
                           validator: (value) {
                             if(value == null){
                               return 'email is required !';
@@ -987,6 +989,11 @@ class _PassengerInformation extends State<PassengerInformation> {
                     if (formKey.currentState!.validate()) {
                       // use the information provided
                       formKey.currentState!.save();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                          builder: (context) => OtpVerifyEmail(email)));
+
                     }
                   },
                   child: Container(
