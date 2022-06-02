@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:untitled/pages/flights/otp_verify_email.dart';
+import 'package:email_auth/email_auth.dart';
 
 class PassengerInformation extends StatefulWidget {
   final airwayId, flightId, from, to;
@@ -40,7 +41,7 @@ class _PassengerInformation extends State<PassengerInformation> {
   final adult, infant, child;
   final departureTime, arrivalTime;
   final flightType;
-
+  late EmailAuth emailAuth = EmailAuth(sessionName: ' ');
   _PassengerInformation(
       this.from,
       this.to,
@@ -59,6 +60,7 @@ class _PassengerInformation extends State<PassengerInformation> {
   late String bookingID;
 
   late String phone, email;
+  late bool submitValid ;
 
   late List<String> firstNameAdult = ['adults first name', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
   late List<String> fatherNameAdult = ['adults father name', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
@@ -168,11 +170,21 @@ class _PassengerInformation extends State<PassengerInformation> {
   int selectedAdultsAge = 18;
   int selectedChildrenAge = 10;
   String selectedInfantsAge = '<2';
-
   String selectedGender = 'male';
 
-
   final formKey = GlobalKey<FormState>();
+  void sendOTP() async {
+    bool res = await emailAuth.sendOtp(recipientMail: email, otpLength: 6);
+    if (res) {
+      // using a void function because i am using a
+      // stateful widget and seting the state from here.
+      setState(() {
+        submitValid = true;
+      });
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -989,6 +1001,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                     if (formKey.currentState!.validate()) {
                       // use the information provided
                       formKey.currentState!.save();
+                      sendOTP();
                       Navigator.push(
                           context,
                           MaterialPageRoute(

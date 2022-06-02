@@ -27,11 +27,11 @@ dependencies:
   webview_flutter: ^2.0.12
   carousel_slider: ^4.0.0
   intl: ^0.17.0
-  flutter_typeahead: ^3.2.1
+  flutter_typeahead: ^4.0.0
   http: ^0.13.3
   provider: ^6.0.0
   email_auth: ^1.0.0
-
+  pinput: ^2.2.9
 
   # The following adds the Cupertino Icons fonts to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -399,10 +399,6 @@ flutter:
     - json/airway.json
     - json/destinations.json
     - json/airports.json
-    - json/prices/8U.json
-    - json/prices/YL.json
-    - json/prices/LN.json
-    - json/prices/UZ.json
     - images/verify.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
