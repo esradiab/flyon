@@ -1,7 +1,5 @@
 import 'dart:convert';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:http/http.dart' as https;
 import 'package:untitled/buttons/flightbooking/passangerinformations.dart';
 
@@ -99,21 +97,17 @@ String flightdate = ' ';
                         padding: EdgeInsets.only(top: 10.0),
                         child: InkWell(
                           onTap: () {
+                            flightdate = snapshot.data[index]['dep_time'] ;
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => PassengerInformation(
-                                        from,
-                                        to,
                                         adult,
                                         child_,
                                         infant,
                                         flightType,
-                                        snapshot.data[index]['airline_iata'],
                                         snapshot.data[index]['flight_iata'],
-                                        flightdate,
-                                        snapshot.data[index]['dep_time'],
-                                        snapshot.data[index]['arr_time'])));
+                                       )));
                           },
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,59 +1,44 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:untitled/pages/flights/otp_verify_email.dart';
 import 'package:email_auth/email_auth.dart';
 
 class PassengerInformation extends StatefulWidget {
-  final airwayId, flightId, from, to;
+  final flightId;
 
-  final flightDate;
   final adult, infant, child;
-  final departureTime, arrivalTime;
+
 
   final flightType;
 
   PassengerInformation(
-    this.from,
-    this.to,
     this.adult,
     this.child,
     this.infant,
     this.flightType,
-    this.airwayId,
     this.flightId,
-    this.flightDate,
-    this.departureTime,
-    this.arrivalTime,
   );
 
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _PassengerInformation(from, to, adult, child, infant, flightType,
-        airwayId, flightId, flightDate, departureTime, arrivalTime);
+    return _PassengerInformation( adult, child, infant, flightType,
+        flightId);
   }
 }
 
 class _PassengerInformation extends State<PassengerInformation> {
-  final airwayId, flightId, from, to;
-  final flightDate;
+  final  flightId;
   final adult, infant, child;
-  final departureTime, arrivalTime;
   final flightType;
   late EmailAuth emailAuth = EmailAuth(sessionName: ' ');
   _PassengerInformation(
-      this.from,
-      this.to,
+
       this.adult,
       this.child,
       this.infant,
       this.flightType,
-      this.airwayId,
-      this.flightId,
-      this.flightDate,
-      this.departureTime,
-      this.arrivalTime);
+      this.flightId
+      );
 
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
@@ -71,106 +56,31 @@ class _PassengerInformation extends State<PassengerInformation> {
   late List<String> firstNameInfant = ['infants first name', ' ' , ' '];
   late List<String> fatherNameInfant= ['infants father name', ' ' , ' '];
   late List<String> lastNameInfant = ['infants last name' , ' ' , ' '];
-  List<String?> adults = ['adults', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
+  late List<String> adults = ['adults', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
   late List<String> children = ['children', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
   late List<String> infants = ['infants', ' ' , ' '];
-  late List<int> adultsAge = [
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
-    35,
-    36,
-    37,
-    38,
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46,
-    47,
-    48,
-    49,
-    50,
-    51,
-    52,
-    53,
-    54,
-    55,
-    56,
-    57,
-    58,
-    59,
-    60,
-    61,
-    62,
-    63,
-    64,
-    65,
-    66,
-    67,
-    68,
-    69,
-    70,
-    71,
-    72,
-    73,
-    74,
-    75,
-    76,
-    77,
-    78,
-    79,
-    80,
-    81,
-    82,
-    83,
-    84,
-    85,
-    86,
-    87,
-    88,
-    89,
-    90,
-    91,
-    92,
-    93,
-    94,
-    95,
-    96,
-    97,
-    98,
-    99,
-  ];
-
-  late List<int> childrenAge = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  late List<String> adultGender = ['adults gender', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'male' , 'male'];
+  late List<String> childrenGender = ['children gender', 'male', 'male', 'male', 'male', 'male', 'male', 'male', 'male' , 'male'];
+  late List<String> infantsGender = ['infants gender', 'male' , 'male'];
+  late List<String> adultsAg = ['adults age', '18', '18', '18', '18', '18', '18', '18', '18' , '18'];
+  late List<String> childrenAg = ['children age', '10', '10', '10', '10', '10', '10', '10', '10' , '10'];
+  late List<String> infantsAg = ['infants age', '<2>' , '<2>'];
+  late List<String> adultsAge =  [for (int i = 18; i <= 100; i++) '$i'];
+  late List<String> allPassengerName = [' ', ' ', ' ', ' '  , ' ', ' ', ' ', ' ', ' ' , ' '] ;
+  late int allPassengerCount = adult + child + infant ;
+  late List<String> allAges = [' ', ' ', ' ', ' '  , ' ', ' ', ' ', ' ', ' ' , ' '];
+  late List<String> allGender=[' ', ' ', ' ', ' '  , ' ', ' ', ' ', ' ', ' ' , ' '];
+  late List<String> childrenAge =  [for (var i = 2; i <= 12; i++) "$i"];
   late List<String> infantsAge = ['<2'];
   late List<String> gender = ['male', 'female'];
   int selectedAdultsAge = 18;
   int selectedChildrenAge = 10;
   String selectedInfantsAge = '<2';
   String selectedGender = 'male';
+  int count = 13 ;
+
+
+
 
   final formKey = GlobalKey<FormState>();
   void sendOTP() async {
@@ -374,6 +284,8 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else
+                                return null ;
 
                             },
                             textInputAction: TextInputAction.next,
@@ -410,6 +322,8 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else
+                                return null;
                             },
                             onChanged: (value) {
                               fatherNameAdult[i] = value;
@@ -445,6 +359,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else return null;
                             },
                             onChanged: (value) {
                               lastNameAdult[i] = value;
@@ -480,7 +395,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               ),
                               Container(
                                 width: 150,
-                                child: DropdownButton<int>(
+                                child: DropdownButton<String>(
                                   itemHeight: 50,
                                   hint: Text("choose passenger age"),
                                   isExpanded: true,
@@ -488,23 +403,24 @@ class _PassengerInformation extends State<PassengerInformation> {
                                     Icons.arrow_drop_down,
                                     size: 24,
                                   ),
-                                  items: adultsAge.map((int value) {
-                                    return DropdownMenuItem<int>(
+                                  items: adultsAge.map((String value) {
+                                    return DropdownMenuItem<String>(
                                       value: value,
                                       child: Text(
-                                        "$value",
+                                        value,
                                         style: TextStyle(
                                           fontSize: 18,
                                         ),
                                       ),
                                     );
                                   }).toList(),
-                                  onChanged: (int? newvalue) {
+                                  onChanged: (String? newvalue) {
                                     setState(() {
-                                      this.selectedAdultsAge = newvalue!;
+                                      adultsAg[i]= newvalue! ;
+
                                     });
                                   },
-                                  value: selectedAdultsAge,
+                                  value: adultsAg[i],
                                 ),
                               ),
                             ],
@@ -542,10 +458,10 @@ class _PassengerInformation extends State<PassengerInformation> {
                                   }).toList(),
                                   onChanged: (String? newvalue) {
                                     setState(() {
-                                      this.selectedGender = newvalue!;
+                                      adultGender[i] = newvalue! ;
                                     });
                                   },
-                                  value: selectedGender,
+                                  value: adultGender[i],
                                 ),
                               ),
                             ],
@@ -598,6 +514,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else return null;
                             },
                             onChanged: (value) {
                               firstNameChild[i] = value;
@@ -632,6 +549,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else return null;
                             },
                             onChanged: (value) {
                               fatherNameChild[i] = value;
@@ -665,6 +583,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else return null;
                             },
                             onChanged: (value) {
                               lastNameChild[i] = value;
@@ -698,7 +617,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               ),
                               Container(
                                 width: 150,
-                                child: DropdownButton<int>(
+                                child: DropdownButton<String>(
                                   itemHeight: 50,
                                   hint: Text("choose passenger age"),
                                   isExpanded: true,
@@ -706,23 +625,23 @@ class _PassengerInformation extends State<PassengerInformation> {
                                     Icons.arrow_drop_down,
                                     size: 24,
                                   ),
-                                  items: childrenAge.map((int value) {
-                                    return DropdownMenuItem<int>(
+                                  items: childrenAge.map((String value) {
+                                    return DropdownMenuItem<String>(
                                       value: value,
                                       child: Text(
-                                        "$value",
+                                        value,
                                         style: TextStyle(
                                           fontSize: 18,
                                         ),
                                       ),
                                     );
                                   }).toList(),
-                                  onChanged: (int? newvalue) {
+                                  onChanged: (String? newvalue) {
                                     setState(() {
-                                      this.selectedChildrenAge = newvalue!;
+                                      childrenAg[i]  =newvalue!  ;
                                     });
                                   },
-                                  value: selectedChildrenAge,
+                                  value: childrenAg[i],
                                 ),
                               ),
                             ],
@@ -760,10 +679,10 @@ class _PassengerInformation extends State<PassengerInformation> {
                                   }).toList(),
                                   onChanged: (String? newvalue) {
                                     setState(() {
-                                      this.selectedGender = newvalue!;
+                                      childrenGender[i] = newvalue! ;
                                     });
                                   },
-                                  value: selectedGender,
+                                  value: childrenGender[i],
                                 ),
                               ),
                             ],
@@ -816,6 +735,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else return null;
                             },
                             onChanged: (value) {
                               firstNameInfant[i] = value;
@@ -850,6 +770,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else return null;
                             },
                             onChanged: (value) {
                               fatherNameInfant[i] = value;
@@ -884,6 +805,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                               if (value.length < 3) {
                                 return 'Too short!';
                               }
+                              else return null;
                             },
                             onChanged: (value) {
                               lastNameInfant[i] = value;
@@ -930,7 +852,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                                     return DropdownMenuItem<String>(
                                       value: value,
                                       child: Text(
-                                        "$value",
+                                       value,
                                         style: TextStyle(
                                           fontSize: 18,
                                         ),
@@ -971,7 +893,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                                     return DropdownMenuItem<String>(
                                       value: value,
                                       child: Text(
-                                        "$value",
+                                        value,
                                         style: TextStyle(
                                           fontSize: 18,
                                         ),
@@ -980,10 +902,10 @@ class _PassengerInformation extends State<PassengerInformation> {
                                   }).toList(),
                                   onChanged: (String? newvalue) {
                                     setState(() {
-                                      this.selectedGender = newvalue!;
+                                      infantsGender[i]= newvalue! ;
                                     });
                                   },
-                                  value: selectedGender,
+                                  value: infantsGender[i],
                                 ),
                               ),
                             ],
@@ -1002,10 +924,30 @@ class _PassengerInformation extends State<PassengerInformation> {
                       // use the information provided
                       formKey.currentState!.save();
                       sendOTP();
+                      for(int i=1 ; i<= adult ; i++) {
+                        allPassengerName[i] = adults[i];
+                        allAges[i] = adultsAg[i];
+                        allGender[i] = adultGender[i];
+                      }
+                      int j=1;
+                      for(int i=adult+1 ; i<= child+adult ; i++) {
+                        allPassengerName[i] = children[j];
+                        allAges[i] = childrenAg[j];
+                        allGender[i] = childrenGender[j];
+                        j++;
+                      }
+                       j=1 ;
+                      for(int i=adult+child+1 ; i<= allPassengerCount ; i++) {
+                        allPassengerName[i] = infants[j];
+                        allAges[i] = infantsAg[j];
+                        allGender[i] = infantsGender[j];
+                      }
+
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                          builder: (context) => OtpVerifyEmail(email)));
+                          builder: (context) => OtpVerifyEmail(email ,phone , flightId , flightType ,  allPassengerName , allPassengerCount ,
+                          allAges , allGender)));
 
                     }
                   },

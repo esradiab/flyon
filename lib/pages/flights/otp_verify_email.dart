@@ -4,23 +4,42 @@ import 'package:pinput/pinput.dart';
 import 'package:untitled/buttons/flightbooking/add_database.dart';
 
 class OtpVerifyEmail extends StatefulWidget {
-  late final email;
+    final email;
+    final phone ;
+    final flightId ;
+    final flightType ;
+    final passengersNames ;
+    final passengersCount ;
+    final ages ;
+    final genders ;
 
-  OtpVerifyEmail(email) {
-    this.email = email;
-  }
+
+  OtpVerifyEmail(this.email , this.phone  , this.flightId , this.flightType ,   this.passengersNames , this.passengersCount ,
+      this.ages , this.genders) ;
 
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _OtpVerifyEmail(email);
+    return _OtpVerifyEmail(email ,phone , flightId , flightType ,passengersNames , passengersCount ,
+        ages , genders);
   }
 }
 
 class _OtpVerifyEmail extends State<OtpVerifyEmail> {
+  final email;
+  final phone ;
+  final flightId ;
+  final flightType ;
+  final passengersNames ;
+  final passengersCount ;
+  final ages ;
+  final genders ;
+
+  _OtpVerifyEmail(this.email , this.phone  , this.flightId , this.flightType ,  this.passengersNames , this.passengersCount ,
+      this.ages , this.genders);
+
   late EmailAuth emailAuth = new EmailAuth(sessionName: '');
 
-  late final email;
   late bool otpValid = false;
 
   late List<String> otp;
@@ -28,9 +47,6 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
   late String otpS = ' ';
   final TextEditingController otpController = TextEditingController();
 
-  _OtpVerifyEmail(email) {
-    this.email = email;
-  }
 
   void verifyOtp() async {
     var res = emailAuth.validateOtp(
@@ -137,7 +153,8 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => AddDatabase()));
+                                builder: (context) => AddDatabase(email ,phone , flightId , flightType , passengersNames , passengersCount ,
+                                    ages , genders)));
                       } else {
                         otpValid = false;
                         setState(() {
@@ -160,7 +177,8 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
                   verifyOtp();
                   if (otpValid) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => AddDatabase()));
+                        MaterialPageRoute(builder: (context) => AddDatabase(email ,phone , flightId , flightType , passengersNames , passengersCount ,
+                            ages , genders)));
                   } else {
                     setState(() {
                       Padding(
