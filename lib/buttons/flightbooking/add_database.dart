@@ -31,16 +31,11 @@ class _AddDatabase extends State<AddDatabase>{
   final passengersCount ;
   final ages ;
   final genders ;
-
+  String bookingId= '01223';
   _AddDatabase(this.email , this.phone  , this.flightId , this.flightType ,  this.passengersNames , this.passengersCount ,
       this.ages , this.genders);
   //allPassengers = adults ;
-   insertData (){
-    var url = Uri.parse("http://10.0.2.2/passanger/insertdata.php");
-    http.post( url , body: {
-         //'name' : Name.text ,
-    });
-  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

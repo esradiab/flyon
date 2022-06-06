@@ -1,7 +1,9 @@
+import 'dart:convert';
 import 'package:email_auth/email_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:untitled/buttons/flightbooking/add_database.dart';
+import 'package:http/http.dart' as http;
 
 class OtpVerifyEmail extends StatefulWidget {
     final email;
@@ -34,9 +36,48 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
   final passengersCount ;
   final ages ;
   final genders ;
+  String bookingId= '01223';
+
 
   _OtpVerifyEmail(this.email , this.phone  , this.flightId , this.flightType ,  this.passengersNames , this.passengersCount ,
       this.ages , this.genders);
+
+  Future insertData ()async {
+     late List data =
+[    for(int i = 1 ; i<=passengersCount ; i++)
+          {
+        "full_name":passengersNames[i],
+        "age":ages[i],
+        "gender":genders[i],
+        "booking_id":bookingId
+    }];
+     var map = data.cast<Map<String, dynamic>>();
+
+    var url = Uri.parse("http://172.20.10.5/booking/insertdata.php");
+    var headers = {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    };
+    var request = http.Request('POST', url);
+    request.bodyFields ={
+      'booking_id' : bookingId,
+      'phone' : phone,
+      'email' : email,
+      'passenger_data': json.encode(map)
+    };
+    request.headers.addAll(headers);
+    http.StreamedResponse response = await request.send();
+    //print(data);
+    if(response.statusCode == 200){
+      print(request.bodyFields);
+      //return BookingDataModel.fromJson(response) ;
+    }
+    else{
+      print("error");
+      throw Exception("failed to load post");
+
+    }
+
+  }
 
   late EmailAuth emailAuth = new EmailAuth(sessionName: '');
 
@@ -150,6 +191,7 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
                     onCompleted: (pin) {
                       verifyOtp();
                       if (otpValid) {
+                        insertData();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -176,6 +218,7 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
                 onTap: () {
                   verifyOtp();
                   if (otpValid) {
+                    insertData();
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => AddDatabase(email ,phone , flightId , flightType , passengersNames , passengersCount ,
                             ages , genders)));
