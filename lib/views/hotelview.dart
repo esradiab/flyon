@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:untitled/ontab/ontabhotel.dart';
 
 class HotelsView extends StatelessWidget {

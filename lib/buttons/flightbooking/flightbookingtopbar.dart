@@ -26,6 +26,11 @@ class _BookingTopBar extends State<BookingTopBar>{
               //app bar background color..
               backgroundColor: Color(0xff78c6a3),
               //app bar title..
+              leading: IconButton(icon: Icon(Icons.arrow_back_ios),
+                onPressed: (){
+                Navigator.pop(context);
+                },
+              ),
               title: Text("flyOn" ,
                 //text style..
                 style:  TextStyle(

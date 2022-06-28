@@ -39,13 +39,48 @@ class _GetDataFrom extends State<GetDataFrom> {
 
     return data!;
   }
+  Future deleteData ()async {
 
+    var url = Uri.parse("http://172.20.10.5/booking/deletedata.php");
+    var headers = {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    };
+    var request = http.Request('POST', url);
+    request.bodyFields ={
+      'booking_id' : bookingId,
+    };
+    request.headers.addAll(headers);
+    http.StreamedResponse response = await request.send();
+
+    if(response.statusCode == 200){
+      print(request.bodyFields);
+    }
+    else{
+      print("error");
+      throw Exception("failed to load post");
+    }
+  }
   @override
 
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          //set hight..
+          toolbarHeight: 50,
+          //app bar background color..
+          backgroundColor: Color(0xff78c6a3),
+          //app bar title..
+          title: Text(
+            "your information",
+            //text style..
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.black,
+              fontFamily: 'Lobster'
+            ),
+          ),
+        ),
         body: SingleChildScrollView(
           child: FutureBuilder<BookingDataModel>(
               future: getData(),
@@ -224,7 +259,7 @@ class _GetDataFrom extends State<GetDataFrom> {
                             padding: EdgeInsets.all(10),
                             width: MediaQuery.of(context).size.width - 20,
                             decoration: BoxDecoration(
-                              color: Color(0x7592b6aa),
+                              color: Color(0xff78c6a3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.03),
@@ -240,20 +275,23 @@ class _GetDataFrom extends State<GetDataFrom> {
                               "Edit",
                               style: TextStyle(
                                 fontSize: 18,
-                                fontWeight: FontWeight.w700,
+                                fontFamily: 'Lora',
                                 color: Colors.black,
                               ),
                             )),
                       ),
                       SizedBox(height: 10),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          deleteData();
+
+                        },
                         child: Container(
                             alignment: Alignment.center,
                             padding: EdgeInsets.all(10),
                             width: MediaQuery.of(context).size.width - 20,
                             decoration: BoxDecoration(
-                              color: Color(0xAE950E0E),
+                              color: Color(0xedf32020),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.03),
@@ -269,8 +307,9 @@ class _GetDataFrom extends State<GetDataFrom> {
                               "Delete your booking",
                               style: TextStyle(
                                 fontSize: 18,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black,
+                                fontFamily: 'Lora',
+                                color: Colors.white,
+
                               ),
                             )),
                       ),

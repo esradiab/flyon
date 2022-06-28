@@ -6,7 +6,6 @@ class EditBookingData extends StatefulWidget {
   final email;
   final phone;
   final bookingId;
-
   final passengerData;
 
   EditBookingData(this.email, this.phone, this.bookingId, this.passengerData);
