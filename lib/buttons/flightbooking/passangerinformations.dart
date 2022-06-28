@@ -1,6 +1,9 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:untitled/pages/flights/otp_verify_email.dart';
 import 'package:email_auth/email_auth.dart';
+import 'package:untitled/buttons/flightbooking/add_database.dart';
+import 'package:uuid/uuid.dart';
 
 class PassengerInformation extends StatefulWidget {
   final flightId;
@@ -42,10 +45,12 @@ class _PassengerInformation extends State<PassengerInformation> {
 
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
-  late String bookingID;
+  late String bookingID = " ";
 
   late String phone, email;
   late bool submitValid ;
+
+  var uuid = Uuid();
 
   late List<String> firstNameAdult = ['adults first name', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
   late List<String> fatherNameAdult = ['adults father name', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
@@ -80,10 +85,31 @@ class _PassengerInformation extends State<PassengerInformation> {
   int count = 13 ;
 
 
-
+  Future sendEmail()async{
+    final serviceId = 'fly_on_service';
+    final templateId ='template_ts4crku' ;
+    final userId = 'O9JMv9WgOmy24AtUP';
+    final url = Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
+    final response = await http.post(url ,
+        headers: {
+          'origin':'http//localhost',
+          'Content-Type': 'application/json',},
+        body:  json.encode({
+          "service_id": serviceId,
+          "template_id": templateId,
+          "user_id": userId,
+          "template_params":{
+            "to_name": adults[1],
+            "to_email":email ,
+            "booking_id": bookingID
+          }
+        }));
+    print(response.body);
+  }
 
   final formKey = GlobalKey<FormState>();
   void sendOTP() async {
+
     bool res = await emailAuth.sendOtp(recipientMail: email, otpLength: 6);
     if (res) {
       // using a void function because i am using a
@@ -94,6 +120,42 @@ class _PassengerInformation extends State<PassengerInformation> {
     }
   }
 
+  Future insertData ()async {
+    late List data =
+    [    for(int i = 1 ; i<=allPassengerCount ; i++)
+      {
+        "full_name":allPassengerName[i],
+        "age":allAges[i],
+        "gender":allGender[i],
+        "booking_id":bookingID,
+      }];
+    var map = data.cast<Map<String, dynamic>>();
+
+    var url = Uri.parse("http://172.20.10.5/booking/insertdata.php");
+    var headers = {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    };
+    var request = http.Request('POST', url);
+    request.bodyFields ={
+      'booking_id' : bookingID,
+      'phone' : phone,
+      'email' : email,
+      'passenger_data': json.encode(map)
+    };
+    request.headers.addAll(headers);
+    http.StreamedResponse response = await request.send();
+    //print(data);
+    if(response.statusCode == 200){
+      print(request.bodyFields);
+      //return BookingDataModel.fromJson(response) ;
+    }
+    else{
+      print("error");
+      throw Exception("failed to load post");
+
+    }
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -222,21 +284,7 @@ class _PassengerInformation extends State<PassengerInformation> {
                             SizedBox(
                             height: 10,
                             ),
-                            Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                            Text('booking Id:',
-                            style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 18)),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('Id15585'),
-                          ],
-                        )
+
                       ],
                     ),
                   ),
@@ -923,7 +971,6 @@ class _PassengerInformation extends State<PassengerInformation> {
                     if (formKey.currentState!.validate()) {
                       // use the information provided
                       formKey.currentState!.save();
-                      sendOTP();
                       for(int i=1 ; i<= adult ; i++) {
                         allPassengerName[i] = adults[i];
                         allAges[i] = adultsAg[i];
@@ -942,12 +989,14 @@ class _PassengerInformation extends State<PassengerInformation> {
                         allAges[i] = infantsAg[j];
                         allGender[i] = infantsGender[j];
                       }
-
+                      bookingID= uuid.v1();
+                      sendEmail();
+                      insertData();
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                          builder: (context) => OtpVerifyEmail(email ,phone , flightId , flightType ,  allPassengerName , allPassengerCount ,
-                          allAges , allGender)));
+                          builder: (context) => AddDatabase(email ,phone , flightId , flightType ,  allPassengerName , allPassengerCount ,
+                          allAges , allGender ,bookingID)));
 
                     }
                   },

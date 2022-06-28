@@ -5,6 +5,7 @@ import 'package:pinput/pinput.dart';
 import 'package:untitled/buttons/flightbooking/add_database.dart';
 import 'package:http/http.dart' as http;
 
+
 class OtpVerifyEmail extends StatefulWidget {
     final email;
     final phone ;
@@ -14,16 +15,16 @@ class OtpVerifyEmail extends StatefulWidget {
     final passengersCount ;
     final ages ;
     final genders ;
-
+    final bookingId ;
 
   OtpVerifyEmail(this.email , this.phone  , this.flightId , this.flightType ,   this.passengersNames , this.passengersCount ,
-      this.ages , this.genders) ;
+      this.ages , this.genders , this.bookingId) ;
 
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     return _OtpVerifyEmail(email ,phone , flightId , flightType ,passengersNames , passengersCount ,
-        ages , genders);
+        ages , genders , bookingId);
   }
 }
 
@@ -36,11 +37,11 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
   final passengersCount ;
   final ages ;
   final genders ;
-  String bookingId= '01223';
+  final bookingId ;
 
 
   _OtpVerifyEmail(this.email , this.phone  , this.flightId , this.flightType ,  this.passengersNames , this.passengersCount ,
-      this.ages , this.genders);
+      this.ages , this.genders , this.bookingId);
 
   Future insertData ()async {
      late List data =
@@ -83,13 +84,34 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
 
   late bool otpValid = false;
 
-  late List<String> otp;
-
-  late String otpS = ' ';
   final TextEditingController otpController = TextEditingController();
 
 
-  void verifyOtp() async {
+
+  Future sendEmail()async{
+    final serviceId = 'fly_on_service';
+    final templateId ='template_ts4crku' ;
+    final userId = 'O9JMv9WgOmy24AtUP';
+   final url = Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
+   final response = await http.post(url ,
+   headers: {
+     'origin':'http//localhost',
+     'Content-Type': 'application/json',},
+   body:  json.encode({
+     "service_id": serviceId,
+     "template_id": templateId,
+         "user_id": userId,
+     "template_params":{
+       "to_name": passengersNames[1],
+       "to_email":email ,
+       "booking_id": bookingId
+     }
+   }));
+   print(response.body);
+  }
+  void verifyOtp()  {
+
+    //emailAuth.config();
     var res = emailAuth.validateOtp(
         recipientMail: email, userOtp: otpController.text);
     if (res) {
@@ -196,7 +218,7 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => AddDatabase(email ,phone , flightId , flightType , passengersNames , passengersCount ,
-                                    ages , genders)));
+                                    ages , genders , bookingId)));
                       } else {
                         otpValid = false;
                         setState(() {
@@ -221,7 +243,7 @@ class _OtpVerifyEmail extends State<OtpVerifyEmail> {
                     insertData();
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => AddDatabase(email ,phone , flightId , flightType , passengersNames , passengersCount ,
-                            ages , genders)));
+                            ages , genders , bookingId)));
                   } else {
                     setState(() {
                       Padding(
