@@ -5,27 +5,27 @@ import 'package:untitled/buttons/flightbooking/editbooking.dart';
 import 'package:untitled/model/bookingdata.dart';
 
 class GetDataFrom extends StatefulWidget {
-  final email;
+
   final bookingId;
 
-  GetDataFrom(this.email, this.bookingId);
+  GetDataFrom( this.bookingId);
 
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _GetDataFrom(email, bookingId);
+    return _GetDataFrom(bookingId);
   }
 }
 
 class _GetDataFrom extends State<GetDataFrom> {
-  final phone;
+
   final bookingId;
   late String phoneNo;
 
   late String email;
   late int count = 0;
 
-  _GetDataFrom(this.phone, this.bookingId);
+  _GetDataFrom( this.bookingId);
 
    BookingDataModel? data ;
 

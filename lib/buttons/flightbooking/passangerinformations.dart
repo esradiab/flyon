@@ -49,7 +49,6 @@ class _PassengerInformation extends State<PassengerInformation> {
 
   late String phone, email;
   late bool submitValid ;
-
   var uuid = Uuid();
 
   late List<String> firstNameAdult = ['adults first name', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' , ' '];
@@ -990,15 +989,26 @@ class _PassengerInformation extends State<PassengerInformation> {
                         allGender[i] = infantsGender[j];
                       }
                       bookingID= uuid.v1();
-                      sendEmail();
-                      insertData();
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                          builder: (context) => AddDatabase(email ,phone , flightId , flightType ,  allPassengerName , allPassengerCount ,
-                          allAges , allGender ,bookingID)));
-
-                    }
+                      try{
+                        sendEmail();
+                         }catch(e){print(e);}
+                      try{
+                        insertData(); }catch(e){ print(e);
+                      }
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AddDatabase(
+                                    email,
+                                    phone,
+                                    flightId,
+                                    flightType,
+                                    allPassengerName,
+                                    allPassengerCount,
+                                    allAges,
+                                    allGender,
+                                    bookingID)));
+                      }
                   },
                   child: Container(
                       alignment: Alignment.center,

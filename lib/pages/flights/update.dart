@@ -29,7 +29,6 @@ class _EditBooking extends State<EditBooking> {
     }
   }*/
 
-  late TextEditingController _phoneController = TextEditingController();
   late TextEditingController _bookingId = TextEditingController();
 
   @override
@@ -44,47 +43,10 @@ class _EditBooking extends State<EditBooking> {
           padding: EdgeInsets.all(10),
           margin: EdgeInsets.all(10),
               child: Text("to Modify your booking information you"
-                  " should enter the phone number  you entered in your"
-                  " booking data to confirm your identity! \n"
-                  "and then you need to enter your booking Id to get your booking data." , style: TextStyle(
+                  " should enter your booking Id to get your booking data \n you can modify your booking within two days ." , style: TextStyle(
                 fontSize: 17
               ),)),
-      SizedBox(
-        height: 10,
-      ),
-      TextFormField(
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        keyboardType: TextInputType.phone,
-        textInputAction: TextInputAction.next,
-        controller: _phoneController,
-        onChanged: (value) {
-          phone = _phoneController.text;
-        },
-        validator: (value) {
-          if(value == null){
-            return 'phone number is required!' ;
-          }
-          if(value.length < 7 || value.length > 10 ){
-            return 'enter valid phone number!';
-          }
-          String pattern =
-              r'^(?:09[124])?[0-9]{7}$';
-          RegExp regex = RegExp(pattern);
-          if (!regex.hasMatch(value))
-            return 'Enter a valid phone number!';
-          else
-            return null;
-        },
-        decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          prefixIcon: Icon(
-            Icons.email,
-            color: Color(0xff78c6a3),
-          ),
-          labelText: 'phone',
-          hintText: '091-1111111',
-        ),
-      ),
+
       SizedBox(
         height: 10,
       ),
@@ -113,7 +75,7 @@ class _EditBooking extends State<EditBooking> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => GetDataFrom(phone, bookingId)));
+                    builder: (context) => GetDataFrom( bookingId)));
 
         },
         child: Container(

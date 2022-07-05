@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/buttons/flightbooking/flightbookingtopbar.dart';
 import 'package:untitled/views/airwaysviews.dart';
@@ -41,6 +40,66 @@ class _Home extends State<Home>{
           ),),
         ),
         //this widget make the page scrollable..
+            drawer: Drawer(
+            backgroundColor: Color(0xa178c6a3),
+              width: 150,
+              // Add a ListView to the drawer. This ensures the user can scroll
+              // through the options in the drawer if there isn't enough vertical
+              // space to fit everything.
+
+              child: ListView(
+                // Important: Remove any padding from the ListView.
+                padding: EdgeInsets.zero,
+                children: [
+          SizedBox(height: 20,),
+            ListTile(
+              title:  Row(
+                children: [
+                  Icon(
+                    Icons.contact_mail_outlined , size: 20,),
+                  SizedBox(width: 5,),
+                  Text('contact us'),
+                ],
+              ),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+
+              },
+            ),
+                  ListTile(
+                    title:  Row(
+                      children: [
+                        Icon(
+                          Icons.language , size: 20,),
+                        SizedBox(width: 5,),
+                        Text('language'),
+                      ],
+                    ),
+                    onTap: () {
+                      // Update the state of the app
+                      // ...
+                      // Then close the drawer
+
+                    },
+                  ),
+                  ListTile(
+
+                    title:  Row(
+                      children: [
+                      Icon(
+                      Icons.help , size: 20,),
+                        SizedBox(width: 5,),
+                        Text('help'),
+                      ],
+                    ),
+                    onTap: () {
+                      // Update the state of the app
+                      // ...
+                      // Then close the drawer
+                    },
+                  ),])),
         body: SingleChildScrollView(
           //container contains column child..
           child :Container(

@@ -27,7 +27,12 @@ class _EditBookingData extends State<EditBookingData> {
   _EditBookingData(this.email, this.phone, this.bookingId, this.passengerData);
 
   late List<String> adultsAge = [for (int i = 18; i <= 100; i++) '$i'];
-  late List<String> childrenAge =  [for (int i = 2; i < 18; i++) "$i"];
+  late List<String> childrenAge =  [for (int i = 2; i < 18; i++)
+    if(i<10)
+    '0$i'
+  else
+    '$i'
+  ];
   late List<String> infantsAge = ['<2'];
   late List<String> gender = ['male', 'female'];
 
@@ -128,7 +133,7 @@ class _EditBookingData extends State<EditBookingData> {
                             if (value == null) {
                               return 'phone number is required!';
                             }
-                            if (value.length < 7 || value.length > 10) {
+                            if (value.length < 7 || value.length > 11) {
                               return 'enter valid phone number!';
                             }
                             String pattern = r'^(?:09[124])?[0-9]{7}$';
@@ -287,11 +292,11 @@ class _EditBookingData extends State<EditBookingData> {
                               SizedBox(
                                 width: 10,
                               ),
-                              if (passengerData[i]['age'].compareTo('18') < 0 &&  passengerData[i]['age'].compareTo('11') >0)
+                              if (passengerData[i]['age'].compareTo('18') < 0 &&  passengerData[i]['age'].compareTo('02') >=0)
                               Container(
                                 padding: EdgeInsets.all(10),
                                 width: 250,
-                                child: DropdownButton<String>(
+                                child: DropdownButtonFormField<String>(
                                   itemHeight: 50,
                                   hint: Text("choose passenger age"),
                                   isExpanded: true,
@@ -310,9 +315,9 @@ class _EditBookingData extends State<EditBookingData> {
                                       ),
                                     );
                                   }).toList(),
-                                  onChanged: (String? newValue) {
+                                  onChanged: (String? value) {
                                     setState(() {
-                                    passengerData[i]['age']=newValue;
+                                    passengerData[i]['age'] = value;
                                     });
                                   },
                                   value: passengerData[i]['age'],
