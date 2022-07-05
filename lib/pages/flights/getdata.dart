@@ -252,7 +252,7 @@ class _GetDataFrom extends State<GetDataFrom> {
                               MaterialPageRoute(
                                   builder: (context) => EditBookingData(email,
                                       phoneNo, bookingId, passengerData)));
-                          print(passengerData);
+
                         },
                         child: Container(
                             alignment: Alignment.center,

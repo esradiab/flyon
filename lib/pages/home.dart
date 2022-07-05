@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/buttons/flightbooking/flightbookingtopbar.dart';
+import 'package:untitled/contactus.dart';
 import 'package:untitled/views/airwaysviews.dart';
 import 'package:untitled/views/destinationview.dart';
 import 'package:untitled/views/hotelview.dart';
@@ -62,9 +63,10 @@ class _Home extends State<Home>{
                 ],
               ),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ContactUs()));
 
               },
             ),
