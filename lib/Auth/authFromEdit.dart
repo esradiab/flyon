@@ -2,8 +2,7 @@ import 'package:email_auth/email_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
-
-import '../auth.config.dart';
+//import '../auth.config.dart';
 import '../pages/flights/getdata.dart';
 
 class AuthEmail extends StatefulWidget{
@@ -134,7 +133,7 @@ class _AuthEmail extends State<AuthEmail>{
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => GetDataFrom(email , bookingId)));
+                                builder: (context) => GetDataFrom( bookingId)));
                       } else {
                         otpValid = false;
                         setState(() {
@@ -157,7 +156,7 @@ class _AuthEmail extends State<AuthEmail>{
                   verifyOtp();
                   if (otpValid) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => GetDataFrom(email , bookingId )));
+                        MaterialPageRoute(builder: (context) => GetDataFrom( bookingId )));
                   } else {
                     setState(() {
                       Padding(

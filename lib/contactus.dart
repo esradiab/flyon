@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'pages/bottombar.dart';
+
 class ContactUs extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -16,7 +18,7 @@ class _ContactUs extends State<ContactUs>{
 
    late String email ;
    late String name ;
-    late String feedback ;
+    late String message ;
    late String subject ;
   final formKey = GlobalKey<FormState>();
 bool sent =false , error = false ;
@@ -37,17 +39,37 @@ bool sent =false , error = false ;
              "name": name,
              "from_email":email ,
              "subject": subject ,
-             "feedback":feedback
+             "feedback":message
            }
          }));
      print(response.body);
+     if(response.statusCode == 200){
+       showDialog(
+         context: context,
+         builder: (ctx) => AlertDialog(
+           title: const Text("done!" , style: TextStyle(
+               color: Colors.green
+           ),),
+           content: const Text("the message sent successfully!"),
+         ),
+       ).then((value){
+         Navigator.push(
+             context,
+             MaterialPageRoute(
+                 builder: (context) => BottomBar()));
+       });
+     }
+     else{
+       print("error");
+       throw Exception("failed to load post");
+     }
    }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('send feedback'),
+        title: Text('send Message'),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -82,10 +104,10 @@ bool sent =false , error = false ;
                   },
                   validator: (value){
                     if(value!.isEmpty){
-                      return 'name is required !';
+                      return 'name is required!';
                     }
                     else if(value.length < 4){
-                      return 'name is too short !';
+                      return 'name is too short!';
                     }
                     else return null;
                   },
@@ -160,7 +182,7 @@ bool sent =false , error = false ;
                  },
                  validator: (value){
                    if(value!.isEmpty){
-                     return 'subject is required !';
+                     return 'subject is required!';
                    }
                    else return null;
                  },
@@ -168,7 +190,7 @@ bool sent =false , error = false ;
                Container(
                  alignment: Alignment.centerLeft,
                  padding: EdgeInsets.only(right: 10 , left: 10 , top: 15 , bottom: 4),
-                 child: Text('FeedBack: ' , style:TextStyle(
+                 child: Text('Message: ' , style:TextStyle(
                      fontSize: 18,
                      fontWeight: FontWeight.w600
                  )),
@@ -180,23 +202,23 @@ bool sent =false , error = false ;
                    hintMaxLines: 7,
                    prefixIcon: Icon(Icons.feedback),
                    border: OutlineInputBorder(),
-                   hintText: 'enter your FeedBack',
+                   hintText: 'enter your message',
                  ),
                  onFieldSubmitted: (value) {
                    setState(() {
-                            feedback=value;
+                            message=value;
                    });
                  },
                  onChanged: (value) {
                    setState(() {
-                       feedback=value;
+                       message=value;
                    });
                  },
                  validator: (value){
-                   if(value == null){
-                     return 'feedback is required !';
+                   if(value!.isEmpty){
+                     return 'message is required!';
                    }
-                   else if(value.length < 10){
+                   else if(value.length < 5){
                      return 'value is too short';
                    }
                    else return null;
@@ -207,10 +229,8 @@ bool sent =false , error = false ;
                  onPressed: () {
                    if (formKey.currentState!.validate()) {
                      // use the information provided
-                     print("i am in");
                      formKey.currentState!.save();
                      if(!sent ) {
-                       print('here iam');
                       try {
                         sendEmail();
                         sent=true ;
@@ -221,7 +241,7 @@ bool sent =false , error = false ;
                     }
                      else if(error) {
                        sent=false ;
-                       Text(" error sending massege ");
+                       Text(" error sending message ");
                     }
                   }
                  },

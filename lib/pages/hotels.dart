@@ -18,23 +18,34 @@ class _Hotels extends State<Hotels>{
         debugShowCheckedModeBanner: false,
         home :Scaffold(
         body: Container(
+          //future builder widget  get future data form json file or api
           child  :FutureBuilder(
+            //set the resource for the future data
             future: DefaultAssetBundle.of(context)
             .loadString('json/hotels.json'),
+            //build the data
             builder: (context, snapshot) {
               // Decode the JSON
+              //new variable data put all the file or api data inside it...
               var data = json.decode(snapshot.data.toString());
+              //then return your page widgets
+              //return list view builder shows A list of widgets with data
               return ListView.builder(
+                // item builder as a loop showing all the data
                 itemBuilder: (BuildContext context, int index) {
-                  return InkWell(
+                  //inkWell widget make the child inside it clickable
+                   return InkWell(
                     onTap: (){
+                      //on click navigate to OnTabHotel page
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => OnTabHotel(index)));
                     },
+                     //new container with widget inside
                     child: Container(
                       height: 120,
+                        //set decoration for the container
                         decoration: BoxDecoration(
                           border: Border(
                             bottom: BorderSide( color: Colors.grey,width: 3),
@@ -74,6 +85,7 @@ class _Hotels extends State<Hotels>{
                                       Icon(Icons.star_sharp , size: 20, color: Colors.yellow,),
                                   ],
                                 ),
+                                //expanded text
                                 Expanded(
                                     child: Text(data[index]["prices"] + " LYD" ,
                                     style:TextStyle(

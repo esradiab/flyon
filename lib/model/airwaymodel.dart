@@ -1,4 +1,5 @@
 class AirwayModel{
+
   late String name ;
   late String id ;
   late List<String> Pic ;

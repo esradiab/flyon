@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:untitled/pages/flights/airways.dart';
+import 'package:untitled/pages/flights/flightstopbar.dart';
 
 class EditBookingData extends StatefulWidget {
   final email;
@@ -36,8 +38,6 @@ class _EditBookingData extends State<EditBookingData> {
   late List<String> infantsAge = ['<2'];
   late List<String> gender = ['male', 'female'];
 
-
-
   Future upDateData ()async {
 
     var map = passengerData.cast<Map<String, dynamic>>();
@@ -55,9 +55,22 @@ class _EditBookingData extends State<EditBookingData> {
     };
     request.headers.addAll(headers);
     http.StreamedResponse response = await request.send();
-
     if(response.statusCode == 200){
-       print(request.bodyFields);
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: const Text("done!" , style: TextStyle(
+            color: Colors.green
+          ),),
+          content: const Text("You update your data successfully!"),
+        ),
+      ).then((value){
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => TopBar()));
+      });
+
     }
     else{
       print("error");
@@ -446,10 +459,12 @@ class _EditBookingData extends State<EditBookingData> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       // use the information provided
-                      print("i am in");
-                      upDateData();
+                      try {
+                        upDateData();
+                      } catch (e, s) {
+                        print(s);
+                      }
                       formKey.currentState!.save();
-
 
                     }
                   },

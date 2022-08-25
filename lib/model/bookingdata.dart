@@ -45,6 +45,7 @@ class BookingData {
   late String email;
   late String bookingId;
   late String date;
+  late String flight_date;
   BookingData(this.bookingId, this.phone, this.email ,this.date);
 
   BookingData.fromJson(Map<String, dynamic> json) {
@@ -52,5 +53,6 @@ class BookingData {
     phone = json['phone'];
     email = json['email'];
     date = json['booking_date'] as String;
+    flight_date = json['flight_date'] as String;
   }
 }

@@ -1,32 +1,35 @@
-import 'dart:convert';
-import 'package:http/http.dart' as https;
+//Airport class Model
+class AirportModel{
+  late List<AirportData> airport;
 
-class AirportModel {
-   String? airport;
-   String? iata;
 
-  AirportModel(
-      {required this.airport, required this.iata});
+  AirportModel( this.airport);
 
-  static AirportModel fromJson(Map<String, dynamic>json) => AirportModel(
-    airport : json['name'],
-    iata : json['iata_code']
-  );
-}
-class AirportApi {
-  static Future<List<AirportModel>> getAirportsSuggestions(String query)async {
-    final response = await https
-        .get(Uri.parse('https://airlabs.co/api/v9/airports?api_key=3db1de03-948f-442f-a84f-90a54ac7666b'));
-    final data= await json.decode(response.body);
-    final airports = data['response'] as List;
-    return airports.map((json) => AirportModel.fromJson(json)).where((airports){
-      final nameLower = airports.airport!.toLowerCase();
-      final queryLower = query.toLowerCase();
-      return nameLower.contains(queryLower);
-    }).toList()  ;
+   AirportModel.fromJson(Map<String, dynamic> json) {
+
+    if (json['response']!=null) {
+      print('im in');
+      airport = <AirportData>[];
+       json['response'].forEach((v) {
+         airport.add( new AirportData.fromJson(v));
+         print(airport);
+      });
+//if the data is empty show error message
+    }    else if(airport.isEmpty){print('passenger data is empty');}
+
   }
 }
+//new class for the list data
+class AirportData{
+  late String name ;
+  late String id ;
+  late String countryId;
+AirportData(this.name , this.id , this.countryId);
 
+  AirportData.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    id = json['iata_code'];
+    countryId = json['country_code'];
 
-
-
+  }
+}
